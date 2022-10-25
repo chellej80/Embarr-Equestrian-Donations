@@ -1,12 +1,12 @@
 [
   {
     "pk": 1,
-    "model": "animals.product",
+    "model": "animals.animal",
     "fields": {
       "sku": "pp5001340155",
       "name": "Embarr",
       "description": "TBC",
-      "Donation": 20.00,
+      "donate": 20.00,
       "category": 3,
       "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
       "image": "DP0709201205510679M.jpg"
@@ -14,12 +14,12 @@
   },
   {
     "pk": 2,
-    "model": "animals.product",
+    "model": "animals.animal",
     "fields": {
       "sku": "pp5001600425",
       "name": "Tucker",
       "description": "TBC",
-      "Donation": 20.00,
+      "donate": 20.00,
       "category": 3,
       "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
       "image": "DP0113201617034987M.jpg"
@@ -27,12 +27,12 @@
   },
   {
     "pk": 3,
-    "model": "animals.product",
+    "model": "animals.animal",
     "fields": {
       "sku": "pp5001730010",
       "name": "Locke",
       "description": "TBC",
-      "Donation": 20.00,
+      "donate": 20.00,
       "category": 4,
       "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1230201417013175M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
       "image": "DP1230201417013175M.jpg"
@@ -40,12 +40,12 @@
   },
   {
     "pk": 4,
-    "model": "animals.product",
+    "model": "animals.animal",
     "fields": {
       "sku": "pp5001890157",
       "name": "Shannon",
       "description": "TBC",
-      "Donation": 20.00,
+      "donate": 20.00,
       "category": 2,
       "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0716201503423610M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
       "image": "DP0716201503423610M.jpg"
@@ -53,15 +53,15 @@
   },
   {
     "pk": 5,
-    "model": "animals.product",
+    "model": "animals.animal",
     "fields": {
       "sku": "pp5002111605",
       "name": "Misty",
       "description": "TBC",
-      "Donation": 20.00,
+      "donate": 20.00,
       "category": 5,
       "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1115201210371197C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
       "image": "DP1115201210371197C.jpg"
     }
-  },
+  }
 ]
