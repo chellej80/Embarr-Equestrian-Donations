@@ -18,5 +18,5 @@ class CategoryAdmin(admin.ModelAdmin):
         'friendly_name',
         'name',
     )
-admin.site.register(Animal)
-admin.site.register(Category)
+admin.site.register(Animal, AnimalAdmin)
+admin.site.register(Category, CategoryAdmin)
