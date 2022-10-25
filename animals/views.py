@@ -12,4 +12,4 @@ def all_animals(request):
         'animals': animals,
     }
 
-    return render(request, 'animals/animal.html', context)
+    return render(request, 'animals/animals.html', context)
