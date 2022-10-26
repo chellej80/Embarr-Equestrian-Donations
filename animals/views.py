@@ -3,6 +3,7 @@ from .models import Animal
 
 # Create your views here.
 
+
 def all_animals(request):
     """ A view to show all products, including sorting and search queries """
 
