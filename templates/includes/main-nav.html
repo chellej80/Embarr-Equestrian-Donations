@@ -16,11 +16,11 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'animals' %}" class="dropdown-item">All Animals</a>
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item ">Mares</a>
-                <a href="" class="dropdown-item ">Geldings</a>
-                <a href="" class="dropdown-item ">Stallions</a>
-                <a href="" class="dropdown-item ">Ponies</a>
+                <a href="{% url 'animals' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'animals' %}?category=mares" class="dropdown-item ">Mares</a>
+                <a href="{% url 'animals' %}?category=geldings" class="dropdown-item ">Geldings</a>
+                <a href="{% url 'animals' %}?category=stallions" class="dropdown-item ">Stallions</a>
+                <a href="{% url 'animals' %}?category=ponies" class="dropdown-item ">Ponies</a>
                 
             </div>
         </li>
