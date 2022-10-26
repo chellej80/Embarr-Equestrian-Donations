@@ -3,11 +3,11 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/hero_image_horse_field.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
+    color: navy;
+    font-family: 'Roboto';
 }
 
 /* from Bulma */
@@ -28,13 +28,13 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: navy;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: navy;
     color: white;
 }
 
@@ -44,12 +44,12 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: navy;
     color: white;
 }
 
 .text-black {
-    color: #000 !important;
+    color: navy !important;
 }
 
 .border-black {
