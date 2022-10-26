@@ -33,6 +33,7 @@ def all_animals(request):
     context = {
         'animals': animals,
         'search_term': query,
+        'current_categories': categories,
     }
 
     return render(request, 'animals/animals.html', context)
