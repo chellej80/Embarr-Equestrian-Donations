@@ -34,7 +34,7 @@ body {
 }
 
 .btn-black {
-    background: navy;
+    background: black;
     color: white;
 }
 
@@ -44,18 +44,25 @@ body {
     border: 1px solid black;
 }
 
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: navy;
+    background: #222;
     color: white;
 }
 
 .text-black {
-    color: navy !important;
+    color: #000 !important;
 }
 
 .border-black {
@@ -74,6 +81,23 @@ body {
 	position: fixed;
 	background: white;
 	z-index: -1;
+}
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /* -------------------------------- Media Queries */

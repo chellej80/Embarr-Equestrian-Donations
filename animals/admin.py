@@ -8,7 +8,7 @@ class AnimalAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'category',
-        'donate',
+        'donation',
     )
 
     ordering = ('sku',)
