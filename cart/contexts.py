@@ -3,12 +3,13 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from animals.models import Animal
 
+
 def cart_contents(request):
 
     cart_items = []
     total = 0
     product_count = 0
-    animal = request.session.get('cart', {})
+    cart = request.session.get('cart', {})
 
     for item_id, quantity in cart.items():
         animal = get_object_or_404(Animal, pk=item_id)
@@ -40,4 +41,3 @@ def cart_contents(request):
     }
 
     return context
-    
