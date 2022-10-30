@@ -34,7 +34,7 @@ body {
 }
 
 .btn-black {
-    background: black;
+    background: navy;
     color: white;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 .text-black {
-    color: #000 !important;
+    color: navy !important;
 }
 
 .border-black {
@@ -70,7 +70,7 @@ body {
 }
 
 .bg-black {
-    background: #000 !important;
+    background: navy !important;
 }
 
 .overlay {

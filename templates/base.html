@@ -104,11 +104,7 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
-            </div>            
-        </div>
+        
     </header>
 
     {% if messages %}
@@ -125,5 +121,14 @@
     {% endblock %}
 
     
-  </body>
+    
+  </body> 
+  <footer class="footer mt-auto py-3 dark-bg">
+    <p class="m-0 text-center text-black">Follow us: 
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Go to the facebook Embarr Equestrian page"><i class="fab fa-facebook-square ms-3" ></i></a>
+      <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Go to the Twitter Embarr Equestrian page"><i class="fab fa-twitter-square ms-3"></i></a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Go to the instagram Embarr Equestrian Page"><i class="fab fa-twitter-square ms-3"></i></a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Go to the youtube Embarr Equestrian Page"><i class="fab fa-youtube-square ms-3"></i></a>
+    </p>
+</footer>
 </html>
