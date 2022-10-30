@@ -88,3 +88,7 @@
         </div>
     </div>
 {% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'animals/includes/quantity_input_script.html' %}
+{% endblock %}
