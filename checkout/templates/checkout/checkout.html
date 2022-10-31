@@ -49,7 +49,7 @@
                         </div>
                         <div class="col-7">
                             <p class="my-0"><strong>{{ item.animal.name }}</strong></p>
-                            <p class="my-0 small">Size: {% if item.animal.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                            
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
@@ -91,7 +91,7 @@
                         {{ order_form.county | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
 							{% if user.is_authenticated %}
-								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+								<label class="form-check-label" for="id-save-info">Save this address information to my profile</label>
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
 								<label class="form-check-label" for="id-save-info">
@@ -115,7 +115,7 @@
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
-							<span class="font-weight-bold">Adjust Bag</span>
+							<span class="font-weight-bold">Adjust Cart</span>
 						</a>
 						<button id="submit-button" class="btn btn-black rounded-0">
 							<span class="font-weight-bold">Complete Order</span>
