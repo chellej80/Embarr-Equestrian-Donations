@@ -42,13 +42,12 @@ class Comment(models.Model):
     """
 
     
-    blog = models.ForeignKey(Post, on_delete=models.CASCADE,
+    blog = models.ForeignKey(Blog, on_delete=models.CASCADE,
                              related_name='reviews')
     name = models.CharField(max_length=80)
     location = models.CharField(max_length=80, default='e.g Dublin')
     email = models.EmailField()
     body = models.TextField()
-    rating = models.IntegerField(choices=RATING_CHOICES, default='5 stars')
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
