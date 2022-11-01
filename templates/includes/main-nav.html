@@ -4,37 +4,26 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 About Us
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Our Mission</a>
-                <a href="" class="dropdown-item">Visit Us</a>
-                <a href="" class="dropdown-item">FAQ's</a>
-            </div>
+            
         </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Horses
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'animals' %}" class="dropdown-item">All Animals</a>
+                <a href="{% url 'animals' %}" class="dropdown-item">All Horses</a>
                 <a href="{% url 'animals' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
-                <a href="{% url 'animals' %}?category=mares" class="dropdown-item ">Mares</a>
-                <a href="{% url 'animals' %}?category=geldings" class="dropdown-item ">Geldings</a>
-                <a href="{% url 'animals' %}?category=stallions" class="dropdown-item ">Stallions</a>
+                <a href="{% url 'animals' %}?category=horses" class="dropdown-item ">Horses</a>
                 <a href="{% url 'animals' %}?category=ponies" class="dropdown-item ">Ponies</a>
                 
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Blog
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">All Posts</a>
-                <a href="" class="dropdown-item">Newest</a>
-                <a href="" class="dropdown-item">Oldest</a>
-                
-            </div>
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="/blog">
+                Blog</a>
+
+            
         </li>
 
         
