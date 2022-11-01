@@ -1,0 +1,244 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+  }
+  
+  .masthead {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 30vh;
+    width: 100%;
+    background: #698bb0;
+  }
+  
+  .row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  header {
+    background: #fff;
+  }
+  
+  .head_text {
+    color: white;
+  }
+  
+  .site-heading {
+    text-align: center;
+  }
+  
+  .card {
+    box-shadow: 0 16px 48px #e3e7eb;
+  }
+  
+  .card-title {
+    font-size: 1.5em;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .top-left {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+  }
+  
+  .bottom-left {
+    position: absolute;
+    bottom: 10px;
+    left: 16px;
+  }
+  
+  .shadow {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-danger {
+    color: #fff;
+    background-color: blue;
+  }
+  
+  /* Media Queries */
+  
+  @media only screen and (min-width: 425px) and (max-width: 768px) {
+    .card-title {
+      font-size: 1em;
+    }
+  
+    .btn-primary {
+      font-size: 0.75rem;
+    }
+  }
+  
+  @media only screen and (min-width: 280px) and (max-width: 425px) {
+    .card-title {
+      font-size: 0.75em;
+    }
+  
+    .btn-primary {
+      font-size: 0.5rem;
+    }
+  }
+  
+  @media only screen and (min-width: 525px) and (max-width: 768px) {
+    .site-heading {
+      text-align: center;
+      font-size: 2.75vh;
+    }
+  }
+  
+  @media only screen and (min-width: 280px) and (max-width: 525px) {
+    .site-heading {
+      text-align: center;
+      font-size: 2vh;
+    }
+  }
+  
+/*body {
+        background-color: #F9FAFC;
+    }
+
+
+.brand {
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4A4A4F;
+}
+
+.red-o {
+    color: #E84610;
+}
+
+.thin {
+    font-weight: 300;
+}
+
+.light-bg {
+    background-color: #fff;
+}
+
+.dark-bg {
+    background-color: #445261;
+}
+
+.main-bg {
+    background-color: #F9FAFC;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #23BBBB;
+}
+
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.masthead-text {
+    background-color: #445261;
+    color: white;
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.masthead-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #445261;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #445261;
+}
+
+.post-link:hover,
+.page-link {
+    color: #E84610;
+}
+
+.post-title {
+    margin-top: 20%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
+}
+
+.btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
+}
+
+.link {
+    color: #23BBBB;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
+}
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
+}*/
