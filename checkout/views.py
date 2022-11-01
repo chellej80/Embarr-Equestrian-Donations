@@ -6,6 +6,8 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from animals.models import Animal
+from profiles.forms import UserProfileForm
+from profiles.models import UserProfile
 from cart.contexts import cart_contents
 
 import stripe
