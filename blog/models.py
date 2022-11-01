@@ -15,7 +15,7 @@ STATUS = (
 
 
 
-class Blog(models.Model):
+class Post(models.Model):
     """
     Model for the creation & management of the Service posts
     """
@@ -42,8 +42,8 @@ class Comment(models.Model):
     """
 
     
-    blog = models.ForeignKey(Blog, on_delete=models.CASCADE,
-                             related_name='reviews')
+    post = models.ForeignKey(Post, on_delete=models.CASCADE,
+                             related_name='comments')
     name = models.CharField(max_length=80)
     location = models.CharField(max_length=80, default='e.g Dublin')
     email = models.EmailField()
@@ -51,6 +51,7 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
+    
 
     class Meta:
         """order by created date/time"""
@@ -61,4 +62,4 @@ class Comment(models.Model):
 
     def get_absolute_url(self):
         """Sets absolute URL"""
-        return reverse('blog_detail', args=[self.blog.slug])
+        return reverse('post_detail', args=[self.post.slug])

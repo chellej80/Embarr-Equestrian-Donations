@@ -1,14 +1,16 @@
 """Admin Imports"""
 from django import forms
 from django.contrib import admin
-from django.contrib.auth.models import User
-# from django_summernote.admin import SummernoteModelAdmin
+#from django.contrib.auth.models import User
+#from django_summernote.admin import SummernoteModelAdmin
 
-from .models import Blog, Comment
+from .models import Post, Comment
 
 
 @admin.register(Post)
-class BlogAdmin():
+
+
+class PostAdmin(admin.ModelAdmin):
     """
     Admin Class for the management of Blog posts
 
@@ -20,21 +22,17 @@ class BlogAdmin():
     #summernote_fields = ('content',)
 
 
+@admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    """
-    Admin Class for the management of Review Posts
-
-    """
-    list_display = ('body', 'post', 'created_on', 'active', 'approved')
+    list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
-    search_fields = ('name', 'body')
-    actions = ['approve_reviews']
+    search_fields = ('name', 'email', 'body')
+    actions = ['approve_comments']
 
-    def approve_reviews(self, request, queryset):
-        """Function for approval updates"""
+    def approve_comments(self, request, queryset):
         queryset.update(approved=True)
 
 
-admin.site.register(Comment, CommentAdmin)
+
 
 
