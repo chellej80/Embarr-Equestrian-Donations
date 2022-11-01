@@ -9,9 +9,9 @@ from django.shortcuts import (render, get_object_or_404,
                               reverse, redirect)
 from django.http import HttpResponseRedirect
 from django.db.models import Q
-from .models import Post, comment
+from .models import Post, Comment
 # from django.contrib.auth.models import User
-from .forms import commentForm, UserUpdateForm
+#from .forms import commentForm, UserUpdateForm
 # from django.urls import reverse_lazy
 
 
@@ -20,7 +20,7 @@ class PostList(generic.ListView):
     This class is for the display of the service posts
     """
     queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
+    template_name = 'blog/posts.html'
     paginate_by = 3
 
 
@@ -39,7 +39,7 @@ class PostDetail(View):
 
         return render(
             request,
-            "post_detail.html",
+            "blog/post_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -75,23 +75,4 @@ class PostDetail(View):
                        'comment_form': comment_form,
                        'new_comment': new_comment})
 
-@login_required
-def delete_comment(request, comment_id):
-    """
-    This Function is used to Delete comment
-    """
-    comment = get_object_or_404(comment, id=comment_id)
-    comment.delete()
-    messages.success(request, 'Your comment was deleted successfully')
-    return HttpResponseRedirect(reverse(
-        'post_detail', args=[comment.post.slug]))
 
-
-class Editcomment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
-    """
-    This Function is for the Editing/ update of a users comment
-    """
-    model = comment
-    template_name = 'edit_comment.html'
-    form_class = commentForm
-    success_message = 'Your comment was updated'
