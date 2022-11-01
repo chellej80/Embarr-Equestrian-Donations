@@ -2,26 +2,26 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="row">
 
-        
-        <!-- Post Entries Column -->
-      <div class="col-md-8 mt-3 left"> {% for post in post_list %} <div class="card mb-4">
-        <div class="card-body">
-          <div class="image-container">
-            <div class="top-left">
-            <h2 class="card-title">{{ post.title }}</h2>
-          </div>
-            <img class="card-img-top" src="" alt="Horse Head in Field">
-            <div class="bottom-left"><a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Click here to Review &rarr;</a></div>
-          </div>
-        </div>
-      </div> {% endfor %} </div> 
-</div> {% if is_paginated %} <nav aria-label="Page navigation container">
-  <ul class="pagination justify-content-center"> {% if page_obj.has_previous %} <li>
-      <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a>
-    </li> {% endif %} {% if page_obj.has_next %} <li>
-      <a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a>
-    </li> {% endif %} </ul>
-</nav> {% endif %} {%endblock%}
+        <div class="container">
+            <div class="row">
+              <!-- Post Entries Column -->
+              <div class="col-md-8 mt-3 left"> {% for post in post_list %} <div class="card mb-4">
+                  <div class="card-body">
+                    <div class="image-container">
+                      <div class="top-left">
+                      <h2 class="card-title">{{ post.title }}</h2>
+                    </div>
+                      <img class="card-img-top" src="https://res.cloudinary.com/chellej80/image/upload/v1657053329/horse_field_se4no3.jpg" alt="Horse Head in Field">
+                      <div class="bottom-left"><a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Click here to Review &rarr;</a></div>
+                    </div>
+                  </div>
+                </div> {% endfor %} </div> 
+            </div>
+          </div> {% if is_paginated %} <nav aria-label="Page navigation container">
+            <ul class="pagination justify-content-center"> {% if page_obj.has_previous %} <li>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a>
+              </li> {% endif %} {% if page_obj.has_next %} <li>
+                <a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a>
+              </li> {% endif %} </ul>
+          </nav> {% endif %} {%endblock%}
