@@ -81,8 +81,9 @@ def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, pk=comment_id)
     comment.delete()
     messages.success(request, 'Comment deleted!')
+   
     return HttpResponseRedirect(reverse(
-        'blog/post_detail.html', args=[comment.post.slug]))
+        'post_detail', args=[comment.post.slug]))
 
 
 class Editcomment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
@@ -90,6 +91,6 @@ class Editcomment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     This Function is for the Editing/ update of a users comment
     """
     model = Comment
-    template_name = 'blog/post_edit.html'
+    template_name = 'blog/edit_comment.html'
     form_class = CommentForm
     success_message = 'Your comment was updated'
