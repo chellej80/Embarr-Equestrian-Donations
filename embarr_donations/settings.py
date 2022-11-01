@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -115,16 +116,24 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'embarr_donations.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+# DATABASES = {
+#   'default': dj_database_url.parse('postgres://zicqjasaehayjy:b81ee8f012df83894f40958cccd808c7a10d5f2de1cb3b86ab5d05641dd6c55b@ec2-63-32-248-14.eu-west-1.compute.amazonaws.com:5432/db4vretk5mgth8'),    
+#   }
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
