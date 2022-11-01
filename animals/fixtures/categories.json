@@ -27,14 +27,6 @@
     "pk": 4,
     "model": "animals.category",
     "fields": {
-      "name": "stallions",
-      "friendly_name": "stallions"
-    }
-  },
-  {
-    "pk": 5,
-    "model": "animals.category",
-    "fields": {
       "name": "ponies",
       "friendly_name": "Ponies"
     }

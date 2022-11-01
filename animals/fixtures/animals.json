@@ -33,7 +33,7 @@
       "name": "Locke",
       "description": "TBC",
       "donation": 20.00,
-      "category": 4,
+      "category": 3,
       "image_url": "media/locke.jpg",
       "image": "locke.jpg"
     }
@@ -55,11 +55,76 @@
     "pk": 5,
     "model": "animals.animal",
     "fields": {
-      "sku": "pp5002111605",
+      "sku": "pp5002111741",
       "name": "Misty",
       "description": "TBC",
       "donation": 20.00,
-      "category": 5,
+      "category": 4,
+      "image_url": "media/Charlie.jpg",
+      "image": "Charlie.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "animals.animal",
+    "fields": {
+      "sku": "pp5002111369",
+      "name": "Misty",
+      "description": "TBC",
+      "donation": 20.00,
+      "category": 4,
+      "image_url": "media/Charlie.jpg",
+      "image": "Charlie.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "animals.animal",
+    "fields": {
+      "sku": "pp5002111789",
+      "name": "Misty",
+      "description": "TBC",
+      "donation": 20.00,
+      "category": 4,
+      "image_url": "media/Charlie.jpg",
+      "image": "Charlie.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "animals.animal",
+    "fields": {
+      "sku": "pp5002111654",
+      "name": "Misty",
+      "description": "TBC",
+      "donation": 20.00,
+      "category": 4,
+      "image_url": "media/Charlie.jpg",
+      "image": "Charlie.jpg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "animals.animal",
+    "fields": {
+      "sku": "pp5002111855",
+      "name": "Misty",
+      "description": "TBC",
+      "donation": 20.00,
+      "category": 4,
+      "image_url": "media/Charlie.jpg",
+      "image": "Charlie.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "animals.animal",
+    "fields": {
+      "sku": "pp5002111701",
+      "name": "Misty",
+      "description": "TBC",
+      "donation": 20.00,
+      "category": 4,
       "image_url": "media/Charlie.jpg",
       "image": "Charlie.jpg"
     }
