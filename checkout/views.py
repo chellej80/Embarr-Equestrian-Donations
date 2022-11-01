@@ -71,9 +71,8 @@ def checkout(request):
                             order_line_item = OrderLineItem(
                                 order=order,
                                 animal=animal,
-                                quantity=quantity,
-                                
-                            )
+                                quantity=quantity,                         
+                                )
                             order_line_item.save()
                 except Animal.DoesNotExist:
                     messages.error(request, (
