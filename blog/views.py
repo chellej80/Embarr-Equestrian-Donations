@@ -8,10 +8,10 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import (render, get_object_or_404,
                               reverse, redirect)
 from django.http import HttpResponseRedirect
-from django.db.models import Q
+#from django.db.models import Q
 from .models import Post, Comment
-# from django.contrib.auth.models import User
-#from .forms import commentForm, UserUpdateForm
+from django.contrib.auth.models import User
+from .forms import CommentForm
 # from django.urls import reverse_lazy
 
 
@@ -54,7 +54,7 @@ class PostDetail(View):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
-        comment_form = commentForm(data=request.POST)
+        comment_form = CommentForm(data=request.POST)
         new_comment = None
 
         # comment posted
@@ -67,12 +67,29 @@ class PostDetail(View):
             # Save the comment to the database
             new_comment.save()
         else:
-            comment_form = commentForm()
+            comment_form = CommentForm()
 
-        return render(request, 'post_detail.html',
+        return render(request, 'blog/post_detail.html',
                       {'post': post,
                        'comments': comments,
                        'comment_form': comment_form,
                        'new_comment': new_comment})
 
 
+def delete_comment(request, comment_id):
+    """ Delete a product from the store """
+    comment = get_object_or_404(Comment, pk=comment_id)
+    comment.delete()
+    messages.success(request, 'Comment deleted!')
+    return HttpResponseRedirect(reverse(
+        'blog/post_detail.html', args=[comment.post.slug]))
+
+
+class Editcomment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    """
+    This Function is for the Editing/ update of a users comment
+    """
+    model = Comment
+    template_name = 'blog/post_edit.html'
+    form_class = CommentForm
+    success_message = 'Your comment was updated'

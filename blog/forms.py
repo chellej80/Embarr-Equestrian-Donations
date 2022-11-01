@@ -11,16 +11,6 @@ class CommentForm(forms.ModelForm):
     class Meta:
         """Form fields"""
         model = Comment
-        fields = ('rating', 'location', 'body')
+        fields = ('location', 'body')
 
 
-class UserUpdateForm(forms.ModelForm):
-    """
-    Form class for the user profile update
-    """
-    email = forms.EmailField()
-
-    class Meta:
-        """Form fields"""
-        model = User
-        fields = ['username', 'email', 'first_name', 'last_name']

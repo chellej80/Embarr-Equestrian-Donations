@@ -38,7 +38,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     """
-    Class review model that creates and saves the comment in the DB
+    Class Comment model that creates and saves the comment in the DB
     """
 
     
@@ -58,7 +58,7 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Review {} by {}'.format(self.body, self.name)
+        return 'Comment {} by {}'.format(self.body, self.name)
 
     def get_absolute_url(self):
         """Sets absolute URL"""
