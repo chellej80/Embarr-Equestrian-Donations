@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container">
+  <p style="text-align: center; font-size: 30px; font-weight: bold; padding-top: 30px;">CONTACT US</p>
+
+  <form method="POST">
+      {% csrf_token %}
+
+      <div class="form-group">
+          <label for="exampleFormControlInput1">Name</label>
+          <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your name...">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">E-mail</label>
+        <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your email address...">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Message</label>
+        <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="What's on your mind..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-secondary">Submit</button>
+  </form>
+</div>
+{% endblock content %}
+

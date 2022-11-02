@@ -28,7 +28,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('', include('blog.urls')),
-    path('contact/', include('contacts.urls')),
+    path('', include('contacts.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'embarr_donations.views.handler404'
