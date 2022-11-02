@@ -4,3 +4,4 @@ Disallow: /accounts/
 Disallow: /cart/
 Disallow: /checkout/
 Disallow: /profiles/
+Sitemap: https://embarr-donations.herokuapp.com/sitemap.xml
