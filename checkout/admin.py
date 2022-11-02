@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Order, OrderLineItem
+from django.contrib.auth.models import User
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
