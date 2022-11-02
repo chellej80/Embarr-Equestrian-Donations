@@ -128,5 +128,31 @@
       "image_url": "media/Charlie.jpg",
       "image": "Charlie.jpg"
     }
+  },
+  {
+    "pk": 11,
+    "model": "animals.animal",
+    "fields": {
+      "sku": "pp5002113698",
+      "name": "Misty",
+      "description": "TBC",
+      "donation": 20.00,
+      "category": 4,
+      "image_url": "media/Charlie.jpg",
+      "image": "Charlie.jpg"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "animals.animal",
+    "fields": {
+      "sku": "pp5002117894",
+      "name": "Misty",
+      "description": "TBC",
+      "donation": 20.00,
+      "category": 4,
+      "image_url": "media/Charlie.jpg",
+      "image": "Charlie.jpg"
+    }
   }
 ]
