@@ -1,8 +1,4 @@
-body {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    background-color: #fff;
-  }
+
   
   .masthead {
     overflow: hidden;
@@ -13,22 +9,6 @@ body {
     background: #698bb0;
   }
   
-  .row {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  
-  header {
-    background: #fff;
-  }
-  
-  .head_text {
-    color: white;
-  }
-  
-  .site-heading {
-    text-align: center;
-  }
   
   .card {
     box-shadow: 0 16px 48px #e3e7eb;
