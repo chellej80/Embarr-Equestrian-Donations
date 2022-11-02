@@ -46,7 +46,7 @@ class Comment(models.Model):
                              related_name='comments')
     name = models.CharField(max_length=80)
     location = models.CharField(max_length=80, default='e.g Dublin')
-    email = models.EmailField()
+    #email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
