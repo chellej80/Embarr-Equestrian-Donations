@@ -62,7 +62,21 @@ A list of the issues captured and progressed can be viewed [here](https://github
 ## Database Entity Diagram
 
 
+## Marketing
 
+The site is B2C focused 
+
+ - Facebook page
+ - Mailchimp
+
+## SEO
+
+SEO implementation, including:
+- A robots.txt file
+- A sitemap.xml file
+- Descriptive meta tags
+- rel attributes on links to external resources
+- Content
 
 ## Site Features 
 
@@ -381,6 +395,14 @@ Lighthouse was used to test Performance, Best Practices, Accessibility and SEO o
 
 Python Code inspired and adapted from the following tutorials and sources:
 
+Boiler Plate code taken and adapted from:
+
+- Code Institute - I think therefore I Blog 
+
+- Code Institute - Boutique Ado
+
+Other Sources:
+
 - https://inventwithpython.com/invent4thed/chapter8.html
 
 - https://www.w3schools.com/python/default.asp
@@ -401,7 +423,7 @@ Python Code inspired and adapted from the following tutorials and sources:
 
 - https://www.geeksforgeeks.org/django-crud-create-retrieve-update-delete-function-based-views/
 
-- Code Institute - I think therefore I Blog 
+
 
 
 ### Content
