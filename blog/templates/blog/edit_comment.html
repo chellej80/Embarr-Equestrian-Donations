@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="container shadow-lg p-3 mb-5 bg-body rounded">
+<div class="container mb-5 bg-body rounded">
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
             <a href="{% url 'post_detail' object.pk %}" class="btn btn-light">Back to Feed</a>
@@ -24,4 +24,4 @@
         </div>
     </div>
 </div>
-{% endblock content %}
+% endblock content %

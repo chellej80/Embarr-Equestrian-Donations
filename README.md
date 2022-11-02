@@ -3,7 +3,7 @@
 
 ## Overview
 
-[Embarr Equestrian Donations] This project is a Full Stack website built using the Django framework and deployed using Heroku. It follows the CRUD logic, Users can Create (Submit a Review), Retrieve (Search for a Service), Update (Update their Reviews/ Profile) and Delete (Delete their reviews).
+[Embarr Equestrian Donations] This project is a Full Stack website built using the Django framework and deployed using Heroku. It is a site for a retirement home for senior Horses. The site is a full stack ecommerce platform, where the user can submit online donations and pay using stripe. the site also follows and displays the CRUD logic, Users can Create (Submit a Comment on a blog post), Retrieve (Search for an Animal/ blogpost), Update (Update their blog comments/ Profile) and Delete (Delete their comments).
 
 
 ## The Site Mockup
@@ -13,9 +13,9 @@
 
 Goals:
 
-* To attract new customers, 
-* Highlight the benefits of what the business has to offer, 
-* Provide service information,
+* To attract new donations, 
+* Highlight the benefits of what the charity has to offer, 
+* Provide useful information on the care of the senior horse,
 * Provide a great user experience on all mobile devices,
 * Be easy to navigate
 * Give clear calls to action
@@ -33,25 +33,30 @@ As a website user, I can:
 
 As logged in website user, I can:
 
-1. Log in as a user.
-2. Submit a review of a service.
-3. Edit/Delete my previous reviews.
-4. Manage my profile by updating my details.
-5. Logout from the website.
+1. Register/Log in as a user.
+2. View a catalog of horses that need donations for their care.
+3. Select a horse to donate to and submit an online payment.
+4. Search for and read blog posts.
+5. Comment on blog posts.
+6. Edit/Delete my previous blog comments.
+7. Manage my profile by updating my details.
+8. Sign up for the monthly newsletter
+9. Logout from the website.
 
 As a website superuser, I can:
 
-1. Create and publish a new Service Post.
-2. Create draft service posts that can be reviewed and published at a later date.
+1. Add/ delete horses to/from the catalog & update their details.
+2. Create/ update/delete blog posts
+2. Create draft blog posts that can be reviewed and published at a later date.
 3. Create a new user.
-4. Delete user and reviews.
-5. Approve user's reviews.
+4. Delete user and comment.
+5. Approve user's comments.
 
 
 ## Agile Methodology
 
-This project was managed using the Agile method. All user stories were captured and updated using Githubs Project functionality and can be reviewed [here](https://github.com/).
-A list of the issues captured and progressed can be viewed [here]
+This project was managed using the Agile method. All user stories were captured and updated using Githubs Project functionality and can be reviewed [here](https://github.com/users/chellej80/projects/8).
+A list of the issues captured and progressed can be viewed [here](https://github.com/users/chellej80/projects/8/views/1)
 
 
 ## Database Entity Diagram
@@ -63,7 +68,7 @@ A list of the issues captured and progressed can be viewed [here]
 
 - __Navigation Bar__
 
-  Featured on all pages, the full responsive navigation bar includes links to the Home page and all sub pages - Login, Logout, Register, User Profile link and is identical in structure for each page to allow for easy navigation. When the user logs in, the username appears in lieu of the login option and this links to the user profile page, the register link is also replaced with the logout link. The navigation items are styled to transition to a hamburger menu when the site is reduced in size on a mobile device. This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
+  Featured on all pages, the full responsive navigation bar includes links to the Home page and all sub pages - About, Blog, Hoses shopping bag and User Account, and is identical in structure for each page to allow for easy navigation. When the user logs in,the signin/up link is replaced with the logout link. The navigation items are styled to transition to a hamburger menu when the site is reduced in size on a mobile device. This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
 
     
 
@@ -94,37 +99,37 @@ A list of the issues captured and progressed can be viewed [here]
 
 - __Profile Page__
 
-  The User pofile page can be accessed by clicking on the users name in the navigation bar, once they are logged in. the user can update their personal details here. There is room to expand the functionality of this page, for example, allow the user to upload a profile picture or add a bio section, but this was out of scope for this project. Further styling of this page is required but currently out of scope for the timeframe of this project.
+  The User pofile page can be accessed by clicking on the Account Icon in the navigation bar, once they are logged in. the user can update their personal details here and view their donations history. There is room to expand the functionality of this page, for example, allow the user to upload a profile picture or add a bio section, but this was out of scope for this project. Further styling of this page is required but currently out of scope for the timeframe of this project.
 
   
 
 - __Search Bar__
 
-    The search bar allows a user to search for a service they would like to read about and leave a review. The search is crude and requires some futher development, but this was out of scope for this project.
+    The search bar allows a user to search for a Animal/blog they would like to donate to/ read about and/or comment on. The search is crude and requires some futher development, but this was out of scope for this project.
 
     
 
-- __Service Post Pages__
+- __Blog__
 
-  The service post pages (the homepage), this page lists a high level view of the services offered by Embarr Equestrian. The user can click on the service post to see more detail, or click though the page navigation to see further service posts. These pages also display the 'About me' sidebar, the searchbar option and the navigation bar.
+  
 
    
 
 
 
-- __Service Post Detail Pages__
+- __Blog Detail Pages__
 
   The service post detail page(s) are accessed by clicking on the high level view of a service post. This takes the user to a full page view of the service, that expands on the details, allows the user to read the reviews posted, or if logged in submit a review, or delete/ update a review.
 
   
 
 
-- __Submit Review__
+- __Submit Comment__
 
   The submit review option is accessed via the service post detail page and is only available for logged in registered users, otherwise this option is hidden. Logged in users can select 'Submit a Review', a review form appears, once populated and submitted, a message will display informing the user that their review has been submitted for approval. An admin must approve the review before it will display.
 
   
-- __Update/ Delete Review__
+- __Update/ Delete Comment__
 
   The Update/delete review option is accessed via the service post detail page and is only available for logged in registered users, otherwise this option is hidden. Logged in users can update/ delete reviews they have posted. They cannot update/ delete other users review. On selection of 'Edit' the user will be presented with a form to edit and submit. On submission the user will receive message feedback to say their message has been updated. If the user selects to 'delete' by clicking on the trash can icon, the user will be asked if they are sure they want to delete, and once selected it will update them their message has been deleted.
 
@@ -134,13 +139,12 @@ A list of the issues captured and progressed can be viewed [here]
 
 ### Features Left to Implement
 
-- Approval authentication of updated reviews (This was out of scope)
+- Approval authentication of updated comments (This was out of scope)
 - Bespoke forms for the out of the box Django Auth pages - Login/ Logout/ Register and update review form
 - Contact Page
-- Service Categories
 - Improved search functionality
 - Add bio/ profile picture to profile
-- Image gallery that users can upload to
+
 
     
 # Frameworks & Languages Used
@@ -156,10 +160,9 @@ Python Packages:
 - Cloudinary - Was used to host the static files and media
 - Dj_database_url - To parse the database URL from the environment variables in Heroku
 - Psycopg2 - As an adaptor for Python and PostgreSQL databases
-- Summernote- As a text editor
 - Allauth - For authentication, registration, account management
 - Crispy Forms -To style the forms
-
+-django coniutries
 
 ### Frameworks, Libraries and technologies used
 
@@ -315,7 +318,7 @@ Logout brings user to sign out page | Y
 
 ## Pagination
 
-Pagination is set to '3' in admin
+Pagination is set to '6' in admin
 
 Test Steps:
 
