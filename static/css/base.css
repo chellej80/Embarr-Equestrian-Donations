@@ -40,14 +40,14 @@ body {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    color: navy !important; /* use important to override link colors for <a> elements */
+    border: 1px solid navy;
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: navy;
     color: white !important;
 }
 
@@ -57,7 +57,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: rgb(100, 10, 218);
     color: white;
 }
 
@@ -66,7 +66,7 @@ body {
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid navy !important;
 }
 
 .bg-black {
@@ -84,7 +84,7 @@ body {
 }
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
+    background: #3a74ae !important;
     color: #fff !important;
 }
 
@@ -125,7 +125,7 @@ a.category-badge > span.badge:hover {
     height: 0; 
     border-left: 4px solid transparent;
     border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid navy;
     position: absolute;
     top: -10px;
     right: 36px;
