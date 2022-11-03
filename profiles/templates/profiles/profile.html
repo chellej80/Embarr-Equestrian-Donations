@@ -55,7 +55,7 @@
                                     </td>
                                     <td>{{ order.date }}</td>
                                     <td>
-                                        <ul class="list-unstyled">
+                                        <!--<ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
                                                 <li class="small">
                                                     {% if item.product.has_sizes %}
@@ -64,7 +64,7 @@
                                                 </li>
                                             {% endfor %}
                                         </ul>
-                                    </td>
+                                    </td>-->
                                     <td>${{ order.grand_total }}</td>
                                 </tr>
                             {% endfor %}

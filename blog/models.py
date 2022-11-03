@@ -1,7 +1,4 @@
 from django.db import models
-
-"""Models Imports"""
-from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 
@@ -12,7 +9,6 @@ STATUS = (
     (0, "Draft"),
     (1, "Publish")
 )
-
 
 
 class Post(models.Model):
@@ -41,17 +37,14 @@ class Comment(models.Model):
     Class Comment model that creates and saves the comment in the DB
     """
 
-    
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name='comments')
     name = models.CharField(max_length=80)
     location = models.CharField(max_length=80, default='')
-    #email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
-    
 
     class Meta:
         """order by created date/time"""
