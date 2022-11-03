@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import handler404
+from . import views 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,7 +29,6 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('', include('blog.urls')),
-    path('', include('contacts.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'embarr_donations.views.handler404'
