@@ -28,9 +28,8 @@
                    aria-label="Go to the facebook company page"><i class="fab fa-facebook-f interactive-color"></i> Facebook</a></li>
                 <li><a href="https://www.instagram.com/" rel="noopener" target="_blank"
                    aria-label="Go to the Instagram company page"><i class="fab fa-instagram interactive-color"></i> Instagram</a></li>
+
              </ul>
-          </div>
-          <div class="col-md-4">
              <h3 class="sub-title">Contact Us</h3>
              <ul>
                 <li><i class="fas fa-phone interactive-color"></i> 0353 282828282</li>
@@ -38,6 +37,16 @@
                 <li><i class="fas fa-home interactive-color"></i> Kilcloon, Co.Meath</li>
              </ul>
           </div>
+          <div class="col-md-4">
+             
+             <h3 class="sub-title">Report a Welfare Concern</h3>
+            <form method="POST">
+               {% csrf_token %}
+               {{ form | crispy }}
+               <div class="d-grid gap-2">
+                   <button class="btn btn-success mt-3">Submit!</button></div>
+            </form>
+               </div>
           <div class="col-md-4">
              <h3 class="sub-title">Be the first to know</h3>
              <p>Keep up with all Our News - Sign up for Our Monthly Newsletter</p>
@@ -78,8 +87,6 @@
 </div>
 
 
-<!-- FOOTER -->
-<!-- END OF FOOTER -->
 
 
 
