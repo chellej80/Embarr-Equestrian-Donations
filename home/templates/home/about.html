@@ -30,27 +30,25 @@
             <br>
             <br>
             </h6>
-            <form class="mt-3" action="{% url 'contact' %}" method="POST" id="profile-update-form">
+            <form class="mt-3"method="POST" action="{% url 'contact' %}"id="profile-update-form">
               {% csrf_token %}
-              {{ form|crispy }}
-            </form>
-            <a href="{% url 'contact' %}">
             <button class="btn btn-black rounded-0 text-uppercase float-left">
             Submit Details
-            </button></a>
+            </button>
+         </form>
             </div>
             <div class="col-md-4">
-               <h3 class="sub-title">Our Monthly Newsletter</h3>
-               <p>Keep up with all Our News - Sign up for Our Monthly Newsletter</p>
+               <h3 class="sub-title">Our Newsletter</h3>
+               <p>Keep up with all Our News - Sign up for Our  Monthly Newsletter</p>
                <!-- Mailchimp form -->
                <div id="mc_embed_signup">
-                  <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <form action="#" method="post" id="mc-embedded-subscribe-form" name="subscribe-form" class="validate" target="_blank" novalidate>
                      <div id="mc_embed_signup_scroll">
                         <h4 class="interactive-color">Subscribe</h4>
                         <div class="mc-field-group">
-                           <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                           <label for="mce-EMAIL">Email Address  <span class=" asterisk">*</span>
                            </label>
-                           <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                           <input type="email" value="" name="EMAIL" class="required email" id="EMAIL" required>
                         </div>
                         <div id="mce-responses" class="clear foot">
                            <div class="response" id="mce-error-response" style="display:none"></div>
@@ -84,15 +82,7 @@
                   <li><i class="far fa-envelope interactive-color"></i> embarrdonations@gmail.com</li>
                   <li><i class="fas fa-home interactive-color"></i> Kilcloon, Co.Meath</li>
                </ul>
-            </div>
-
-               
-               
-    
-             <!--<script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-             <script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-             -->
-         
+            </div>      
        </div>
        <hr>
     </div>

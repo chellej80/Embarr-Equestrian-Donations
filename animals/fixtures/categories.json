@@ -3,28 +3,12 @@
     "pk": 1,
     "model": "animals.category",
     "fields": {
-      "name": "new_arrivals",
-      "friendly_name": "New Arrivals"
+      "name": "horses",
+      "friendly_name": "Horses"
     }
   },
   {
     "pk": 2,
-    "model": "animals.category",
-    "fields": {
-      "name": "mares",
-      "friendly_name": "Mares"
-    }
-  },
-  {
-    "pk": 3,
-    "model": "animals.category",
-    "fields": {
-      "name": "geldings",
-      "friendly_name": "Geldings"
-    }
-  },
-  {
-    "pk": 4,
     "model": "animals.category",
     "fields": {
       "name": "ponies",

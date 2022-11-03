@@ -10,5 +10,5 @@ class ContactForm(forms.ModelForm):
     class Meta:
         """Form fields"""
         model = Contact
-        fields = ('location', 'body', 'photo')
+        fields = ('County', 'Town', 'Eircode','Description','Condition')
         

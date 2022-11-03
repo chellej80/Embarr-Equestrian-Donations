@@ -8,11 +8,12 @@ from .models import Animal, Category
 
 
 def all_animals(request):
-    """ A view to show all products, including sorting and search queries """
+    """ A view to show all Horses """
 
     animals = Animal.objects.all()
     query = None
     categories = None
+    paginate_by = 6
 
     if request.GET:
         if 'category' in request.GET:

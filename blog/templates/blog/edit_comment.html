@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 {% block page_header %}
     <div class="container header-container">
@@ -9,26 +10,24 @@
 {% endblock %}
 {% block content %}
 <div class="container mb-5 bg-body rounded">
-    <div class="row">
+  <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
-            <a href="{% url 'post_detail' object.pk %}" class="btn btn-light">Back to Feed</a>
+            <a href="{% url 'post_detail' object.pk %}"></a>
         </div>
     </div>
-    <div class="row col-md-8 mt-3 offset-md-2">
+    <div class="row justify-content-left mt-3 mb-5">
         <div class="col-md-5 col-sm-12">
-            <h5>Update Your Post</h5>
+            <h4>Update Your Comment</h4>
         </div>
     </div>
-    <div class="row justify-content-center mt-3 mb-5">
+    <div class="row justify-content-left mt-3 mb-5">
         <div class="col-md-5 col-sm-12">
             <form method="POST">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <div class="d-grid gap-2">
-                    <button class="btn btn-success mt-3">Submit!</button>
-                </div>
+                <div class="d-grid gap-2"><button class="btn btn-success mt-3">Submit!</button></div>
             </form>
         </div>
     </div>
-</div>
+    </div>
 {% endblock content %}

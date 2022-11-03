@@ -5,9 +5,9 @@
     "fields": {
       "sku": "pp5001340155",
       "name": "Embarr",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 3,
+      "description": "Embarr a bay gelding that used to race on the flat. He is 18 years young and enjoying his retirement. He loves company and despite a hard life he is very healthy and has many happy years ahead.",
+      "donation": 10.00,
+      "category": 1,
       "image_url": "media/Embarr.jpg",
       "image": "Embarr.jpg"
     }
@@ -18,9 +18,9 @@
     "fields": {
       "sku": "pp5001600425",
       "name": "Tucker",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 3,
+      "description": "Tucker aka the F*ucker, is a black ex national hunt racehorse. Once his career on the track ended, he entered the eventing world and was quite sucessful. Tucker came to us for his well earned retirement in 2020 just before covid struck. He is 21 years young",
+      "donation": 10.00,
+      "category": 1,
       "image_url": "media/Tucker.jpg",
       "image": "Tucker.jpg"
     }
@@ -31,9 +31,9 @@
     "fields": {
       "sku": "pp5001730010",
       "name": "Locke",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 3,
+      "description": "Locke aka The Lough Monster, had a tough life, he was an abuse case and we were lucky to have the opportunity to rescue him and give him a life he deserves. He is now settled into retirement and has started to trust people again.",
+      "donation": 10.00,
+      "category": 1,
       "image_url": "media/locke.jpg",
       "image": "locke.jpg"
     }
@@ -44,9 +44,9 @@
     "fields": {
       "sku": "pp5001890157",
       "name": "Shannon",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 2,
+      "description": "Shannon a beautiful bay ex broodmare that was bred from year after year until there was hardly anything left of her but bones. She has landed on her feet and is thriving now, loving life.",
+      "donation": 10.00,
+      "category": 1,
       "image_url": "media/shannon.jpg",
       "image": "shannon.jpg"
     }
@@ -56,10 +56,10 @@
     "model": "animals.animal",
     "fields": {
       "sku": "pp5002111741",
-      "name": "Misty",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 4,
+      "name": "Charlie",
+      "description": "Charlie the cheeky grey pony that used to play polo has embraced retirement with ease. He is full of fun and adores carrots and still is happy to give the odd child a spin around the field.",
+      "donation": 10.00,
+      "category": 2,
       "image_url": "media/Charlie.jpg",
       "image": "Charlie.jpg"
     }
@@ -69,10 +69,10 @@
     "model": "animals.animal",
     "fields": {
       "sku": "pp5002111369",
-      "name": "Misty",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 4,
+      "name": "Coral",
+      "description": "Coral blue, named because of her one blue eye is bursting with personality.",
+      "donation": 10.00,
+      "category": 2,
       "image_url": "media/Charlie.jpg",
       "image": "Charlie.jpg"
     }
@@ -82,10 +82,10 @@
     "model": "animals.animal",
     "fields": {
       "sku": "pp5002111789",
-      "name": "Misty",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 4,
+      "name": "Rosie",
+      "description": "Rosie a chestnut mare ex showumper with a tendon injury has had an early retirement as her career was cut short and she was not suitable for breeding.",
+      "donation": 10.00,
+      "category": 2,
       "image_url": "media/Charlie.jpg",
       "image": "Charlie.jpg"
     }
@@ -95,10 +95,10 @@
     "model": "animals.animal",
     "fields": {
       "sku": "pp5002111654",
-      "name": "Misty",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 4,
+      "name": "Sawyer",
+      "description": "Sawyer was bred in Belarus and his Russian name translates to Compass, but we thought Sawyer suited him better. Sawyer is a full stallion and we rescued him from the sulky racing industry.",
+      "donation": 10.00,
+      "category": 1,
       "image_url": "media/Charlie.jpg",
       "image": "Charlie.jpg"
     }
@@ -109,9 +109,9 @@
     "fields": {
       "sku": "pp5002111855",
       "name": "Misty",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 4,
+      "description": "A conamara pony, bred in Galway and left for dead. This beautiful mare had a second chance at life.",
+      "donation": 10.00,
+      "category": 2,
       "image_url": "media/Charlie.jpg",
       "image": "Charlie.jpg"
     }
@@ -121,10 +121,10 @@
     "model": "animals.animal",
     "fields": {
       "sku": "pp5002111701",
-      "name": "Misty",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 4,
+      "name": "Jade",
+      "description": "Dressage Diva",
+      "donation": 10.00,
+      "category": 1,
       "image_url": "media/Charlie.jpg",
       "image": "Charlie.jpg"
     }
@@ -133,11 +133,11 @@
     "pk": 11,
     "model": "animals.animal",
     "fields": {
-      "sku": "pp5002113698",
-      "name": "Misty",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 4,
+      "sku": "pp5002111701",
+      "name": "Hatton",
+      "description": "Ex professional eventer",
+      "donation": 10.00,
+      "category": 1,
       "image_url": "media/Charlie.jpg",
       "image": "Charlie.jpg"
     }
@@ -146,11 +146,11 @@
     "pk": 12,
     "model": "animals.animal",
     "fields": {
-      "sku": "pp5002117894",
-      "name": "Misty",
-      "description": "TBC",
-      "donation": 20.00,
-      "category": 4,
+      "sku": "pp5002111701",
+      "name": "Jack",
+      "description": "Jack the lad.",
+      "donation": 10.00,
+      "category": 1,
       "image_url": "media/Charlie.jpg",
       "image": "Charlie.jpg"
     }

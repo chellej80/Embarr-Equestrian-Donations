@@ -20,16 +20,11 @@ def about(request):
 
 
 def contact_view(request):
-    """ A view to return the Welfare report form page """
-
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            photo = form.cleaned_data.get("fields")
             form.save()
-            
             return render(request, 'home/about.html')
     form = ContactForm()
     context = {'form': form}
-
     return render(request, 'home/contact.html', context)
