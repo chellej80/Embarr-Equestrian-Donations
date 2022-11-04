@@ -1,204 +1,200 @@
 html {
     height: 100%;
-}
-
-body {
-    background: url('/media/hero_image_horse_field.jpg') no-repeat center center fixed;
+  }
+  
+  body {
+    background: url("/media/hero_image_horse_field.jpg") no-repeat center center
+      fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: navy;
-    font-family: 'Roboto';
-}
-
-
-
-/* from Bulma */
-.icon {
+    font-family: "Roboto";
+  }
+  
+  /* from Bulma */
+  .icon {
     align-items: center;
     display: inline-flex;
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
-}
-
-.logo-font {
+  }
+  
+  .logo-font {
     text-transform: uppercase;
-}
-
-.main-logo-link {
+  }
+  
+  .main-logo-link {
     width: fit-content;
-}
-
-.shop-now-button {
+  }
+  
+  .shop-now-button {
     background: navy;
     color: white;
     min-width: 260px;
-}
-
-.btn-black {
+  }
+  
+  .btn-black {
     background: navy;
     color: white;
-}
-
-.btn-outline-black {
+  }
+  
+  .btn-outline-black {
     background: white;
     color: navy !important; /* use important to override link colors for <a> elements */
     border: 1px solid navy;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
+  }
+  
+  .btn-outline-black:hover,
+  .btn-outline-black:active,
+  .btn-outline-black:focus {
     background: navy;
     color: white !important;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+  }
+  
+  .shop-now-button:hover,
+  .shop-now-button:active,
+  .shop-now-button:focus,
+  .btn-black:hover,
+  .btn-black:active,
+  .btn-black:focus {
     background: rgb(100, 10, 218);
     color: white;
-}
-
-.text-black {
+  }
+  
+  .text-black {
     color: navy !important;
-}
-
-.border-black {
+  }
+  
+  .border-black {
     border: 1px solid navy !important;
-}
-
-.bg-black {
+  }
+  
+  .bg-black {
     background: navy !important;
-}
-
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: rgb(239, 243, 248);
-	z-index: -1;
-}
-
-
-
-a.category-badge > span.badge:hover {
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgb(239, 243, 248);
+    z-index: -1;
+  }
+  
+  a.category-badge > span.badge:hover {
     background: #3a74ae !important;
     color: #fff !important;
-}
-
-.btt-button {
+  }
+  
+  .btt-button {
     height: 42px;
     width: 42px;
     position: fixed;
     bottom: 10px;
     right: 10px;
-}
-
-.btt-link,
-.update-link,
-.remove-item {
+  }
+  
+  .btt-link,
+  .update-link,
+  .remove-item {
     cursor: pointer;
-}
-
-/* ------------------------------- bootstrap toasts */
-
-.message-container {
+  }
+  
+  /* ------------------------------- bootstrap toasts */
+  
+  .message-container {
     position: fixed;
     top: 72px;
     right: 15px;
     z-index: 99999999999;
-}
-
-.custom-toast {
+  }
+  
+  .custom-toast {
     overflow: visible;
-}
-
-.toast-capper {
+  }
+  
+  .toast-capper {
     height: 2px;
-}
-
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
+  }
+  
+  /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+  .arrow-up {
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid navy;
     position: absolute;
     top: -10px;
     right: 36px;
-}
-
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
+  }
+  
+  /* Convenience classes - colors copied from Bootstrap */
+  .arrow-primary {
     border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
+  }
+  
+  .arrow-secondary {
     border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
+  }
+  
+  .arrow-success {
     border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
+  }
+  
+  .arrow-danger {
     border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
+  }
+  
+  .arrow-warning {
     border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
+  }
+  
+  .arrow-info {
     border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
+  }
+  
+  .arrow-light {
     border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
+  }
+  
+  .arrow-dark {
     border-bottom-color: #343a40 !important;
-}
-
-.bag-notification-wrapper {
+  }
+  
+  .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-
-/* Allauth form formatting */
-
-.allauth-form-inner-content p {
+  }
+  
+  /* Allauth form formatting */
+  
+  .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
-}
-
-.allauth-form-inner-content input {
+  }
+  
+  .allauth-form-inner-content input {
     border-color: #000;
     border-radius: 0;
-}
-
-.allauth-form-inner-content label:not([for='id_remember']) {
+  }
+  
+  .allauth-form-inner-content label:not([for="id_remember"]) {
     display: none;
-}
-
-.allauth-form-inner-content input::placeholder {
+  }
+  
+  .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
-}
-
-.allauth-form-inner-content button,
-.allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+  }
+  
+  .allauth-form-inner-content button,
+  .allauth-form-inner-content input[type="submit"] {
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: #fff;
     text-align: center;
@@ -209,57 +205,58 @@ a.category-badge > span.badge:hover {
     user-select: none;
     background-color: navy;
     border: 1px solid navy;
-    padding: .375rem .75rem;
+    padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0;
-}
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
   }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+  /* -------------------------------- Media Queries */
+  
+  /* Slightly larger container on xl screens */
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
     .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
     }
-
+  
     .header-container {
-        padding-top: 164px;
+      padding-top: 164px;
     }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
     .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
     }
-
+  
     .header-container {
-        padding-top: 164px;
+      padding-top: 164px;
     }
-}
-
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
+  }
+  
+  /* pad the top a bit when navbar is collapsed on mobile */
+  @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+      padding-top: 116px;
     }
-
+  
     body {
-        height: calc(100vh - 116px);
+      height: calc(100vh - 116px);
     }
-}
+  }
+  

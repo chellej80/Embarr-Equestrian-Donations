@@ -1,19 +1,9 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
-{% endblock %}
-{% load crispy_forms_tags %}
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-{% block content %}
-<div class="container">
+{% extends "base.html" %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}"> {% endblock %} {% load crispy_forms_tags %} {% block page_header %} <div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div> {% endblock %} {% block content %} <div class="container">
   <div class="row">
     <div class="col-md-8 card mb-4  mt-3">
       <div class="card-body">
@@ -35,15 +25,13 @@
           <div class="card-body">
             <!-- comments -->
             <h2>{{ comments.count }} comment(s)</h2>
-            <p>---------------------------------</p>
-            {% for comment in comments %} <div class="comments" style="padding: 10px;">
+            <p>---------------------------------</p> {% for comment in comments %} <div class="comments" style="padding: 10px;">
               <p class="font-weight-bold">
                 {{ comment.name }} | <span class=" text-muted font-weight-normal">
                   {{ comment.created_on }}
                 </span>
               </p>
               <!--<p>{{ comment.rating }} <span>Stars</span></p>-->
-             
               {{ comment.body | linebreaks }} {% if user.is_authenticated and user.username == comment.name %} <a href="{% url 'edit_comment' comment.id %}" aria-label="Go to the Edit Comments Page">Edit <i class="fa-solid fa-comment-pen"></i>
               </a>
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#delete-comment">
@@ -68,16 +56,11 @@
           </div>
         </div>
       </div>
-    </div>
-{% endblock content %}
-
-{% block postloadjs %}
-<script>
-  setTimeout(function() {
-    let messages = document.getElementById('msg');
-    let alert = new bootstrap.Alert(messages);
-    alert.close();
-  }, 5);
-</script>
-{% endblock %}
-
+    </div> {% endblock content %} {% block postloadjs %}{{ block.super }}
+    <script>
+      setTimeout(function() {
+        let messages = document.getElementById('msg');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+      }, 50);
+    </script> {% endblock %}

@@ -1,18 +1,17 @@
 <div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-      <li class="nav-item dropdown">
-        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'about' %}" id="all-products-link" aria-haspopup="true" aria-expanded="false"> About Us </a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="/blog"> Blog</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'animals' %}" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Horses </a>
-        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-          <a href="{% url 'animals' %}?category=horses" class="dropdown-item">Horses</a>
-          <a href="{% url 'animals' %}?category=ponies" class="dropdown-item ">Ponies</a>
-        </div>
-      </li>
-      
-    </ul>
-  </div>
+  <ul class="navbar-nav w-auto mx-auto">
+    <li class="nav-item dropdown">
+      <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'about' %}" id="all-products-link" aria-haspopup="true" aria-expanded="false"> About Us </a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="logo-font font-weight-bold nav-link text-black mr-5" href="/blog"> Blog</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'animals' %}" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Horses </a>
+      <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+        <a href="{% url 'animals' %}?category=horses" class="dropdown-item">Horses</a>
+        <a href="{% url 'animals' %}?category=ponies" class="dropdown-item ">Ponies</a>
+      </div>
+    </li>
+  </ul>
+</div>

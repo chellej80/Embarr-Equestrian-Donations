@@ -1,5 +1,4 @@
 from django import forms
-#from django.contrib.auth.models import User
 from .models import Contact
 
 
@@ -10,5 +9,5 @@ class ContactForm(forms.ModelForm):
     class Meta:
         """Form fields"""
         model = Contact
-        fields = ('County', 'Town', 'Eircode','Description','Condition')
-        
+        fields = ('County', 'Town', 'Eircode', 'Description', 'Condition')
+

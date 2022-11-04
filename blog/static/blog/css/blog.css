@@ -1,82 +1,78 @@
+.masthead {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  height: 30vh;
+  width: 100%;
+  background: #698bb0;
+}
 
-  
-  .masthead {
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 30vh;
-    width: 100%;
-    background: #698bb0;
-  }
-  
-  
-  .card {
-    box-shadow: 0 16px 48px #e3e7eb;
-    background-color: rgb(224, 236, 250);
-  }
-  
+.card {
+  box-shadow: 0 16px 48px #e3e7eb;
+  background-color: rgb(224, 236, 250);
+}
+
+.card-title {
+  font-size: 2.5em;
+}
+
+.image-container {
+  position: relative;
+}
+
+.top-left {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+}
+
+.shadow {
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: blue;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
   .card-title {
-    font-size: 2.5em;
+    font-size: 1em;
   }
-  
-  .image-container {
-    position: relative;
+
+  .btn-primary {
+    font-size: 0.75rem;
   }
-  
-  .top-left {
-    position: absolute;
-    top: 10px;
-    left: 16px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 425px) {
+  .card-title {
+    font-size: 0.75em;
   }
-  
-  .bottom-left {
-    position: absolute;
-    bottom: 10px;
-    left: 16px;
+
+  .btn-primary {
+    font-size: 0.5rem;
   }
-  
-  .shadow {
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (min-width: 525px) and (max-width: 768px) {
+  .site-heading {
+    text-align: center;
+    font-size: 2.75vh;
   }
-  
-  .btn-danger {
-    color: #fff;
-    background-color: blue;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 525px) {
+  .site-heading {
+    text-align: center;
+    font-size: 2vh;
   }
-  
-  /* Media Queries */
-  
-  @media only screen and (min-width: 425px) and (max-width: 768px) {
-    .card-title {
-      font-size: 1em;
-    }
-  
-    .btn-primary {
-      font-size: 0.75rem;
-    }
-  }
-  
-  @media only screen and (min-width: 280px) and (max-width: 425px) {
-    .card-title {
-      font-size: 0.75em;
-    }
-  
-    .btn-primary {
-      font-size: 0.5rem;
-    }
-  }
-  
-  @media only screen and (min-width: 525px) and (max-width: 768px) {
-    .site-heading {
-      text-align: center;
-      font-size: 2.75vh;
-    }
-  }
-  
-  @media only screen and (min-width: 280px) and (max-width: 525px) {
-    .site-heading {
-      text-align: center;
-      font-size: 2vh;
-    }
-  }
-  
+}

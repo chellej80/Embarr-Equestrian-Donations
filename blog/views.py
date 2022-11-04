@@ -5,13 +5,14 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import (render, get_object_or_404,
-                              reverse, redirect)
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.http import HttpResponseRedirect
-#from django.db.models import Q
+
+# from django.db.models import Q
 from .models import Post, Comment
 from django.contrib.auth.models import User
 from .forms import CommentForm
+
 # from django.urls import reverse_lazy
 
 
@@ -19,8 +20,9 @@ class PostList(generic.ListView):
     """
     This class is for the display of the service posts
     """
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'blog/posts.html'
+
+    queryset = Post.objects.filter(status=1).order_by("-created_on")
+    template_name = "blog/posts.html"
     paginate_by = 6
 
 
@@ -69,28 +71,33 @@ class PostDetail(View):
         else:
             comment_form = CommentForm()
 
-        return render(request, 'blog/post_detail.html',
-                      {'post': post,
-                       'comments': comments,
-                       'comment_form': comment_form,
-                       'new_comment': new_comment})
+        return render(
+            request,
+            "blog/post_detail.html",
+            {
+                "post": post,
+                "comments": comments,
+                "comment_form": comment_form,
+                "new_comment": new_comment,
+            },
+        )
 
 
 def delete_comment(request, comment_id):
-    """ Delete a product from the store """
+    """Delete a product from the store"""
     comment = get_object_or_404(Comment, pk=comment_id)
     comment.delete()
-    messages.success(request, 'Comment deleted!')
-   
-    return HttpResponseRedirect(reverse(
-        'post_detail', args=[comment.post.slug]))
+    messages.success(request, "Comment deleted!")
+
+    return HttpResponseRedirect(reverse("post_detail", args=[comment.post.slug]))
 
 
 class Editcomment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     """
     This Function is for the Editing/ update of a users comment
     """
+
     model = Comment
-    template_name = 'blog/edit_comment.html'
+    template_name = "blog/edit_comment.html"
     form_class = CommentForm
-    success_message = 'Your comment was updated'
+    success_message = "Your comment was updated"

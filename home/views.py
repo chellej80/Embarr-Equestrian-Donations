@@ -5,7 +5,6 @@ from .forms import ContactForm
 from django.shortcuts import (render, get_object_or_404,
                               reverse, redirect)
 
-# Create your views here.
 
 def index(request):
     """ A view to return the index page """

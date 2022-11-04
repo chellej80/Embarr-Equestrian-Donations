@@ -12,5 +12,3 @@ class CommentForm(forms.ModelForm):
         """Form fields"""
         model = Comment
         fields = ('location', 'body')
-
-
