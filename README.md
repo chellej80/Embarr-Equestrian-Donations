@@ -708,6 +708,8 @@ Admin User can edit a service post | Y
 Admin User can approve a review | Y
 Admin User can create/update/delete users | Y
 Admin User can view the welfare concern submissions | Y
+Admin User can see order payments in DB & Stripe | Y
+Admin User can see static files in Aws Bucket and upload | Y
 
 
 ## Bugs
