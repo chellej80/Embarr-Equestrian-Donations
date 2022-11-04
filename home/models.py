@@ -18,5 +18,5 @@ class Contact(models.Model):
     County = models.CharField(max_length=50, default='')
     Town = models.CharField(max_length=50, default='')
     Eircode = models.CharField(max_length=10, default='')
-    Description = models.TextField(max_length=100, default='Please describe the welfare case here & select the condition of the horse below:')
+    Description = models.TextField(max_length=500, default='Please describe the welfare case here & select the condition of the horse below:')
     Condition = models.IntegerField(choices=RATING_SCALE, default=1)

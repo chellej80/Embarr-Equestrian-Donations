@@ -235,6 +235,8 @@ If a user has registered and logged into the site. They can navigate to their ac
 
 <img src=media/Readme/profile.jpg>
 
+__404 Page__
+
 ### Features Left to Implement and items for further development
 
 - Approval authentication of updated comments (This was out of scope)
@@ -248,6 +250,7 @@ If a user has registered and logged into the site. They can navigate to their ac
 - Add front end catalog management.
 - Further SEO improvements e.g sitemap google registration.
 - Wishlist/ favourites.
+- 500 page etc..
     
 # Frameworks & Languages Used
 - HTML
