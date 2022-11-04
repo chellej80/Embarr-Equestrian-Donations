@@ -69,6 +69,7 @@ A list of the issues captured and progressed can be viewed [Here](https://github
 
 ## Database Entity Diagram
 
+<img src=media/DB_ER.jpg>
 
 ## Marketing
 
