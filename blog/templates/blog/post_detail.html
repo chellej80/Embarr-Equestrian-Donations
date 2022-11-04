@@ -70,3 +70,14 @@
       </div>
     </div>
 {% endblock content %}
+
+{% block postloadjs %}
+<script>
+  setTimeout(function() {
+    let messages = document.getElementById('msg');
+    let alert = new bootstrap.Alert(messages);
+    alert.close();
+  }, 5);
+</script>
+{% endblock %}
+

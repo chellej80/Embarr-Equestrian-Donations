@@ -1,1 +1,1 @@
-Embarr Equestrian Confirmation for Order Number {{ order.order_number }}
+Embarr Equestrian Donations Confirmation for Order Number {{ order.order_number }}

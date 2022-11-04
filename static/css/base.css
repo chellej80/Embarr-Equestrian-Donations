@@ -10,6 +10,8 @@ body {
     font-family: 'Roboto';
 }
 
+
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -79,9 +81,11 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: rgb(239, 243, 248);
 	z-index: -1;
 }
+
+
 
 a.category-badge > span.badge:hover {
     background: #3a74ae !important;
