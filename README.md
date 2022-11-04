@@ -3,13 +3,15 @@
 
 ## Overview
 
-[Embarr Equestrian Donations] This project is a Full Stack website built using the Django framework and deployed using Heroku. It is a site for a retirement home for senior Horses. The site is a full stack ecommerce platform, where the user can submit online donations and pay using stripe. the site also follows and displays the CRUD logic, Users can Create (Submit a Comment on a blog post), Retrieve (Search for an Animal/ blogpost), Update (Update their blog comments/ Profile) and Delete (Delete their comments).
+[Embarr Equestrian Donations](https://embarr-donations.herokuapp.com/) This project is a Full Stack website built using the Django framework and deployed using Heroku. It is a site for a retirement home for senior Horses. The site is a full stack ecommerce platform, where the user can submit online donations and pay using stripe. the site also follows and displays the CRUD logic, Users can Create (Submit a Comment on a blog post), Retrieve (Search for an Animal/ blogpost), Update (Update their blog comments/ Profile) and Delete (Delete their comments).
 
 
 ## The Site Mockup
 
+<img src=media/Readme/Mock_up.jpg>
 
-## User Experience
+
+## UX
 
 Goals:
 
@@ -55,8 +57,8 @@ As a website superuser, I can:
 
 ## Agile Methodology
 
-This project was managed using the Agile method. All user stories were captured and updated using Githubs Project functionality and can be reviewed [here](https://github.com/users/chellej80/projects/8).
-A list of the issues captured and progressed can be viewed [here](https://github.com/users/chellej80/projects/8/views/1)
+This project was managed using the Agile method. All user stories were captured and updated using Githubs Project functionality and can be reviewed [Here](https://github.com/users/chellej80/projects/8).
+A list of the issues captured and progressed can be viewed [Here](https://github.com/chellej80/Embarr-Equestrian-Donations/issues)
 
 
 ## Database Entity Diagram
@@ -68,6 +70,7 @@ The site is B2C focused
 
  - Facebook page
  - Mailchimp
+ - Newsletter sign up
 
 ## SEO
 
@@ -380,15 +383,41 @@ I reviewed all content on the site for:
 ## Validation
 
 - I ran all the Python Code through [PEP8](http://pep8online.com/)
-- I ran HTML through [HTML Validator](https://validator.w3.org/)
+- I ran HTML through [HTML Validator](https://validator.w3.org/) 
 - I ran the CSS through [Jigsaw](Jigsawhttps://jigsaw.w3.org)
 - I also ran all code through [code beautifier](https://codebeautify.org/)
 
 ## Lighthouse
 
 Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on Desktop.<br>
+The accesibility needs to be improved, but this was out of scope for this project.
+<img src=media/Readme/lighthouse.jpg>
 
+# Deployment
 
+The site was first developed in Github (Repository created using the Code Institute Template) and tested there locally before deploying to Heroku:
+
+The steps to deploy are as follows: 
+
+- Log in to Heroku or create an account
+- On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
+- You must enter a unique app name
+- Next select your region
+- Click on the Create App button
+- Add Database to App Resources,  Resources Located in the Resources Tab, Add-ons, search and add ‘Heroku Postgres’
+- The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
+- Click Reveal Config Vars and add a new record with SECRET_KEY
+- Click Reveal Config Vars and add a new record with the `CLOUDINARY_URL`
+- Click Reveal Config Vars and add a new record with the `DISABLE_COLLECTSTATIC = 1`
+- Select Github as the deployment method
+- Confirm you want to connect to GitHub
+- Search for the repository name and click the connect button
+- Scroll to the bottom of the deploy page and select the preferred deployment type
+- Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+
+- On submission the project is forked in Github, by forking the project a copy of the original repository is made that can be viewed without affecting the original repository by following these steps: In the GitHub repository, locate the settings, above this is the option to 'fork', select this to create a copy
+
+  - Cloning a repository: When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations. It makes it easier to fix merge conflicts, add or remove files, and push larger commits. 
 
 
 # Credits
@@ -423,7 +452,7 @@ Other Sources:
 
 - https://www.geeksforgeeks.org/django-crud-create-retrieve-update-delete-function-based-views/
 
-
+- https://www.geeksforgeeks.org/e-commerce-website-using-django/
 
 
 ### Content
@@ -441,32 +470,7 @@ All content was written by the project owner.
 
 Special thanks to my mentor Rohit, my colleagues at Code Institute, and Kasia Bogucka
 
-# Deployment
-
-The site was first developed in Github (Repository created using the Code Institute Template) and tested there locally before deploying to Heroku:
-
-The steps to deploy are as follows: 
-
-- Log in to Heroku or create an account
-- On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
-- You must enter a unique app name
-- Next select your region
-- Click on the Create App button
-- Add Database to App Resources,  Resources Located in the Resources Tab, Add-ons, search and add ‘Heroku Postgres’
-- The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
-- Click Reveal Config Vars and add a new record with SECRET_KEY
-- Click Reveal Config Vars and add a new record with the `CLOUDINARY_URL`
-- Click Reveal Config Vars and add a new record with the `DISABLE_COLLECTSTATIC = 1`
-- Select Github as the deployment method
-- Confirm you want to connect to GitHub
-- Search for the repository name and click the connect button
-- Scroll to the bottom of the deploy page and select the preferred deployment type
-- Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
-
-- On submission the project is forked in Github, by forking the project a copy of the original repository is made that can be viewed without affecting the original repository by following these steps: In the GitHub repository, locate the settings, above this is the option to 'fork', select this to create a copy
-
-  - Cloning a repository: When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations. It makes it easier to fix merge conflicts, add or remove files, and push larger commits. 
 
 ## The Deployed Site 
 
-The live link can be found here - 
+The live link can be found [Here](https://embarr-donations.herokuapp.com/)
