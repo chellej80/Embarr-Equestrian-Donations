@@ -13,7 +13,7 @@ def all_animals(request):
     animals = Animal.objects.all()
     query = None
     categories = None
-    paginate_by = 6
+    
 
     if request.GET:
         if "category" in request.GET:
