@@ -119,6 +119,12 @@ SEO implementation, including:
 
 ## Site Features 
 
+- __Home Page__
+
+Home page has the hero image and the Donate option prominently displayed. The navigation and search options are also available as well as the shopping cart icon.
+
+ <img src=media/Readme/heroimage.jpg>
+
 - __Navigation Bar__
 
   Featured on all pages, the full responsive navigation bar includes links to the Home page and all sub pages - About, Blog, Horses, the shopping cart and User Account, it is identical in structure for each page to allow for easy navigation. When the user logs in,the signin/up link is replaced with the logout link. The navigation items are styled to transition to a hamburger menu when the site is reduced in size on a mobile device. This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
@@ -237,6 +243,8 @@ If a user has registered and logged into the site. They can navigate to their ac
 
 __404 Page__
 
+<img src=media/404.jpg>
+
 ### Features Left to Implement and items for further development
 
 - Approval authentication of updated comments (This was out of scope)
@@ -348,6 +356,7 @@ Test 1
 Test Steps:
 
 Click on page navigation links in the nav bar
+
 
 Expected Results  | Pass y/n
 ------------- | ------------- 
