@@ -10,4 +10,3 @@ class ContactForm(forms.ModelForm):
         """Form fields"""
         model = Contact
         fields = ('County', 'Town', 'Eircode', 'Description', 'Condition')
-

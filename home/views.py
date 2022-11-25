@@ -27,3 +27,4 @@ def contact_view(request):
     form = ContactForm()
     context = {'form': form}
     return render(request, 'home/contact.html', context)
+
