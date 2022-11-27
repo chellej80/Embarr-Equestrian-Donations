@@ -17,16 +17,11 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
-    def handle_event(self, event):
-        """
-        Handle a generic/unknown/unexpected webhook event
-        """
-        return HttpResponse(
-            content=f'Unhandled webhook received: {event["type"]}', status=200
-        )
 
     def _send_confirmation_email(self, order):
-        """Send the user a confirmation email"""
+        """
+        Send the user a confirmation email
+        """
         cust_email = order.email
         subject = render_to_string(
             "checkout/confirmation_emails/confirmation_email_subject.txt",
@@ -38,6 +33,15 @@ class StripeWH_Handler:
         )
 
         send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [cust_email])
+
+
+    def handle_event(self, event):
+        """
+        Handle a generic/unknown/unexpected webhook event
+        """
+        return HttpResponse(
+            content=f'Unhandled webhook received: {event["type"]}', status=200
+        )
 
     def handle_payment_intent_succeeded(self, event):
         """
