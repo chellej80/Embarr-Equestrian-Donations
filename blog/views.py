@@ -48,6 +48,7 @@ class PostDetail(View):
             },
         )
 
+
     def post(self, request, slug):
         """
         This Function is used for the comments of posts
@@ -83,6 +84,7 @@ class PostDetail(View):
         )
 
 
+@login_required
 def delete_comment(request, comment_id):
     """Delete a product from the store"""
     comment = get_object_or_404(Comment, pk=comment_id)
