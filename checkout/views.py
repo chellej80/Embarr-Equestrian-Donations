@@ -22,7 +22,7 @@ def cache_checkout_data(request):
         stripe.PaymentIntent.modify(
             pid,
             metadata={
-                "bag": json.dumps(request.session.get("bag", {})),
+                "cart": json.dumps(request.session.get("cart", {})),
                 "save_info": request.POST.get("save_info"),
                 "username": request.user,
             },
@@ -168,8 +168,8 @@ def checkout_success(request, order_number):
         email will be sent to {order.email}.",
     )
 
-    if "bag" in request.session:
-        del request.session["bag"]
+    if "cart" in request.session:
+        del request.session["cart"]
 
     template = "checkout/checkout_success.html"
     context = {

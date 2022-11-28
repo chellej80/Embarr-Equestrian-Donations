@@ -6,13 +6,13 @@ from animals.models import Animal
 
 
 def view_cart(request):
-    """A view that renders the bag contents page"""
+    """A view that renders the cart contents page"""
 
     return render(request, "cart/cart.html")
 
 
 def add_to_cart(request, item_id):
-    """Add a quantity of the specified product to the shopping bag"""
+    """Add a quantity of the specified product to the shopping cart"""
 
     animal = Animal.objects.get(pk=item_id)
     quantity = int(request.POST.get("quantity"))
@@ -23,7 +23,7 @@ def add_to_cart(request, item_id):
         cart[item_id] += quantity
     else:
         cart[item_id] = quantity
-        messages.success(request, f"Added {animal.name} to your bag")
+        messages.success(request, f"Added {animal.name} to your cart")
 
     request.session["cart"] = cart
     return redirect(redirect_url)
@@ -48,7 +48,7 @@ def adjust_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    """Remove the item from the shopping bag"""
+    """Remove the item from the shopping cart"""
 
     try:
         animal = get_object_or_404(Animal, pk=item_id)
