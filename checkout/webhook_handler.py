@@ -9,6 +9,7 @@ from profiles.models import UserProfile
 
 import json
 import time
+import stripe
 
 
 class StripeWH_Handler:
@@ -35,6 +36,7 @@ class StripeWH_Handler:
 
         send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [cust_email])
 
+
     def handle_event(self, event):
         """
         Handle a generic/unknown/unexpected webhook event
@@ -49,13 +51,17 @@ class StripeWH_Handler:
         """
         intent = event.data.object
         pid = intent.id
-        print(intent)
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
 
-        billing_details = intent.charges.data[0].billing_details
+        # Get the Charge object
+        stripe_charge = stripe.Charge.retrieve(
+            intent.latest_charge
+        )
+
+        billing_details = stripe_charge.billing_details # updated
         shipping_details = intent.shipping
-        grand_total = round(intent.charges.data[0].amount / 100, 2)
+        grand_total = round(stripe_charge.amount / 100, 2) # updated
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
@@ -127,11 +133,11 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(cart).items():
-                    product = Product.objects.get(id=item_id)
+                    animal = Animal.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
-                            product=product,
+                            animal=animal,
                             quantity=item_data,
                         )
                         order_line_item.save()
@@ -140,9 +146,9 @@ class StripeWH_Handler:
                                     "items_by_size"].items():
                             order_line_item = OrderLineItem(
                                 order=order,
-                                product=product,
+                                animal=animal,
                                 quantity=quantity,
-                                product_size=size,
+                                animal_size=size,
                             )
                             order_line_item.save()
             except Exception as e:
