@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Contact
+from django.contrib import messages
 from django.views import generic, View
 from .forms import ContactForm
 from django.shortcuts import (render, get_object_or_404,
@@ -23,8 +24,9 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, "Thank you, your Welfare Concern has been Submitted")
             return render(request, 'home/about.html')
     form = ContactForm()
     context = {'form': form}
     return render(request, 'home/contact.html', context)
-
+    

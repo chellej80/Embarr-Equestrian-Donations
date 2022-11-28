@@ -69,6 +69,7 @@ class PostDetail(View):
             new_comment.post = post
             # Save the comment to the database
             new_comment.save()
+            messages.success(request, "You Comment has been submitted for approval")
         else:
             comment_form = CommentForm()
 
@@ -89,7 +90,7 @@ def delete_comment(request, comment_id):
     """Delete a product from the store"""
     comment = get_object_or_404(Comment, pk=comment_id)
     comment.delete()
-    messages.success(request, "Comment deleted!")
+    messages.success(request, "You Comment has been deleted!")
 
     return HttpResponseRedirect(reverse("post_detail", args=[comment.post.slug]))
 
