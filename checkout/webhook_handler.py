@@ -123,24 +123,24 @@ class StripeWH_Handler:
                     original_cart=cart,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(cart).items():
-                    animal = Animal.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            animal=animal,
-                            quantity=item_data,
+                #for item_id, item_data in json.loads(cart).items():
+                    #animal = Animal.objects.get(id=item_id)
+                    #if isinstance(item_data, int):
+                        #order_line_item = OrderLineItem(
+                            #order=order,
+                            #animal=animal,
+                            #quantity=item_data,
                         )
-                        order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                animal=animal,
-                                quantity=quantity,
-                                animal_size=size,
+                        #order_line_item.save()
+                    #else:
+                        #for size, quantity in item_data['items_by_size'].items():
+                            #order_line_item = OrderLineItem(
+                                #order=order,
+                                #animal=animal,
+                                #quantity=quantity,
+                                #animal_size=size,
                             )
-                            order_line_item.save()
+                            #order_line_item.save()
             except Exception as e:
                 if order:
                     order.delete()
