@@ -81,7 +81,7 @@ form.addEventListener('submit', function(ev) {
                     }
                 }
             },
-            shipping: {
+            /*shipping: {
                 name: $.trim(form.full_name.value),
                 phone: $.trim(form.phone_number.value),
                 address: {
@@ -92,7 +92,7 @@ form.addEventListener('submit', function(ev) {
                     postal_code: $.trim(form.postcode.value),
                     state: $.trim(form.county.value),
                 }
-            },
+            },*/
         }).then(function(result) {
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');
