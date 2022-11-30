@@ -69,7 +69,7 @@ class StripeWH_Handler:
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
-                profile.default_phone_number = shipping_details.phone
+                profile.default_phone_number = billing_details.phone
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
                 profile.default_town_or_city = shipping_details.address.city
@@ -85,7 +85,7 @@ class StripeWH_Handler:
                 order = Order.objects.get(
                     full_name__iexact=billing_details.name,
                     email__iexact=billing_details.email,
-                    #phone_number__iexact=shipping_details.phone,
+                    phone_number__iexact=billing_details.phone,
                     #country__iexact=shipping_details.address.country,
                     #postcode__iexact=shipping_details.address.postal_code,
                     #town_or_city__iexact=shipping_details.address.city,
@@ -113,7 +113,7 @@ class StripeWH_Handler:
                     full_name=billing_details.name,
                     email=billing_details.email,
                     user_profile=profile,
-                    #phone_number=shipping_details.phone,
+                    phone_number=billing_details.phone,
                     #country=shipping_details.address.country,
                     #postcode=shipping_details.address.postal_code,
                     #town_or_city=shipping_details.address.city,
