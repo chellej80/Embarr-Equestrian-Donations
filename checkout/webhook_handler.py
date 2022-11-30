@@ -113,7 +113,7 @@ class StripeWH_Handler:
                     full_name=shipping_details.name,
                     email=billing_details.email,
                     user_profile=profile,
-                    phone_number=shipping_details.phone,
+                    phone_number=billing_details.phone,
                     country=shipping_details.address.country,
                     postcode=shipping_details.address.postal_code,
                     town_or_city=shipping_details.address.city,
