@@ -56,12 +56,12 @@ class StripeWH_Handler:
         )
 
         billing_details = stripe_charge.billing_details # updated
-        #shipping_details = intent.shipping
+        shipping_details = intent.shipping
         grand_total = round(stripe_charge.amount / 100, 2) # updated
         # Clean data in the shipping details
-        #for field, value in shipping_details.address.items():
-            #if value == "":
-                #shipping_details.address[field] = None
+        for field, value in shipping_details.address.items():
+            if value == "":
+                shipping_details.address[field] = None
 
         # Update profile information if save_info was checked
         profile = None
@@ -84,14 +84,14 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
-                    email__iexact=shipping_details.email,
-                    #phone_number__iexact=shipping_details.phone,
+                    email__iexact=billing_details.email,
+                    phone_number__iexact=shipping_details.phone,
                     country__iexact=shipping_details.address.country,
-                    #postcode__iexact=shipping_details.address.postal_code,
-                    #town_or_city__iexact=shipping_details.address.city,
-                    #street_address1__iexact=shipping_details.address.line1,
-                    #street_address2__iexact=shipping_details.address.line2,
-                    #county__iexact=shipping_details.address.state,
+                    postcode__iexact=shipping_details.address.postal_code,
+                    town_or_city__iexact=shipping_details.address.city,
+                    street_address1__iexact=shipping_details.address.line1,
+                    street_address2__iexact=shipping_details.address.line2,
+                    county__iexact=shipping_details.address.state,
                     grand_total=grand_total,
                     original_cart=cart,
                     stripe_pid=pid,
@@ -111,16 +111,15 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.create(
                     full_name=shipping_details.name,
+                    email=billing_details.email,
                     user_profile=profile,
-                    email=shipping_details.email,
-                    #phone_number=shipping_details.phone,
+                    phone_number=shipping_details.phone,
                     country=shipping_details.address.country,
-                    #postcode=shipping_details.address.postal_code,
-                    #town_or_city=shipping_details.address.city,
-                    #street_address1=shipping_details.address.line1,
-                    #street_address2=shipping_details.address.line2,
-                    #county=shipping_details.address.state,
-                    grand_total=grand_total,
+                    postcode=shipping_details.address.postal_code,
+                    town_or_city=shipping_details.address.city,
+                    street_address1=shipping_details.address.line1,
+                    street_address2=shipping_details.address.line2,
+                    county=shipping_details.address.state,
                     original_cart=cart,
                     stripe_pid=pid,
                 )
