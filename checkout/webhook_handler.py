@@ -59,9 +59,9 @@ class StripeWH_Handler:
         shipping_details = intent.shipping
         grand_total = round(stripe_charge.amount / 100, 2) # updated
         # Clean data in the shipping details
-        for field, value in shipping_details.address.items():
-            if value == "":
-                shipping_details.address[field] = None
+        #for field, value in shipping_details.address.items():
+            #if value == "":
+                #shipping_details.address[field] = None
 
         # Update profile information if save_info was checked
         profile = None
@@ -85,13 +85,13 @@ class StripeWH_Handler:
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
-                    phone_number__iexact=shipping_details.phone,
+                    #phone_number__iexact=shipping_details.phone,
                     country__iexact=shipping_details.address.country,
-                    postcode__iexact=shipping_details.address.postal_code,
-                    town_or_city__iexact=shipping_details.address.city,
-                    street_address1__iexact=shipping_details.address.line1,
-                    street_address2__iexact=shipping_details.address.line2,
-                    county__iexact=shipping_details.address.state,
+                    #postcode__iexact=shipping_details.address.postal_code,
+                    #town_or_city__iexact=shipping_details.address.city,
+                    #street_address1__iexact=shipping_details.address.line1,
+                    #street_address2__iexact=shipping_details.address.line2,
+                    #county__iexact=shipping_details.address.state,
                     grand_total=grand_total,
                     original_cart=cart,
                     stripe_pid=pid,
