@@ -110,16 +110,16 @@ class StripeWH_Handler:
             order = None
             try:
                 order = Order.objects.create(
-                    full_name=shipping_details.name,
-                    user_profile=profile,
-                    email=shipping_details.email,
-                    phone_number=shipping_details.phone,
-                    country=shipping_details.address.country,
-                    postcode=shipping_details.address.postal_code,
-                    town_or_city=shipping_details.address.city,
-                    street_address1=shipping_details.address.line1,
-                    street_address2=shipping_details.address.line2,
-                    county=shipping_details.address.state,
+                    full_name__iexact=shipping_details.name,
+                    email__iexact=shipping_details.email,
+                    #phone_number__iexact=shipping_details.phone,
+                    country__iexact=shipping_details.address.country,
+                    #postcode__iexact=shipping_details.address.postal_code,
+                    #town_or_city__iexact=shipping_details.address.city,
+                    #street_address1__iexact=shipping_details.address.line1,
+                    #street_address2__iexact=shipping_details.address.line2,
+                    #county__iexact=shipping_details.address.state,
+                    grand_total=grand_total,
                     original_cart=cart,
                     stripe_pid=pid,
                 )
