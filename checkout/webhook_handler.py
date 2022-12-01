@@ -130,7 +130,7 @@ class StripeWH_Handler:
                             #order=order,
                             #animal=animal,
                             #quantity=item_data,
-                        )
+                        #)
                         #order_line_item.save()
                     #else:
                         #for size, quantity in item_data['items_by_size'].items():
@@ -139,7 +139,7 @@ class StripeWH_Handler:
                                 #animal=animal,
                                 #quantity=quantity,
                                 #animal_size=size,
-                            )
+                            #)
                             #order_line_item.save()
             except Exception as e:
                 if order:
