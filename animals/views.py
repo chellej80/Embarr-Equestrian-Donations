@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
 from .models import Animal, Category
@@ -53,6 +54,7 @@ def animal_detail(request, animal_id):
     return render(request, "animals/animal_detail.html", context)
 
 
+@login_required 
 def add_animal(request):
     """ Add a animal to the store """
     if request.method == 'POST':
@@ -74,6 +76,7 @@ def add_animal(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_animal(request, animal_id):
     """ Edit a animal in the store """
     animal = get_object_or_404(Animal, pk=animal_id)
@@ -98,6 +101,7 @@ def edit_animal(request, animal_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_animal(request, animal_id):
     """ Delete a animal from the store """
     animal = get_object_or_404(Animal, pk=animal_id)
