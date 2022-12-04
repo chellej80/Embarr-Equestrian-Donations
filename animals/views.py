@@ -72,3 +72,27 @@ def add_animal(request):
     }
 
     return render(request, template, context)
+
+
+def edit_animal(request, animal_id):
+    """ Edit a animal in the store """
+    animal = get_object_or_404(Animal, pk=animal_id)
+    if request.method == 'POST':
+        form = AnimalForm(request.POST, request.FILES, instance=animal)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated animal!')
+            return redirect(reverse('animal_detail', args=[animal.id]))
+        else:
+            messages.error(request, 'Failed to update animal. Please ensure the form is valid.')
+    else:
+        form = AnimalForm(instance=animal)
+        messages.info(request, f'You are editing {animal.name}')
+
+    template = 'animals/edit_animal.html'
+    context = {
+        'form': form,
+        'animal': animal,
+    }
+
+    return render(request, template, context)
