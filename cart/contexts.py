@@ -8,13 +8,13 @@ def cart_contents(request):
 
     cart_items = []
     total = 0
-    product_count = 0
+    animal_count = 0
     cart = request.session.get("cart", {})
 
     for item_id, quantity in cart.items():
         animal = get_object_or_404(Animal, pk=item_id)
         total += quantity * animal.donation
-        product_count += quantity
+        animal_count += quantity
         cart_items.append(
             {
                 "item_id": item_id,
@@ -28,7 +28,7 @@ def cart_contents(request):
     context = {
         "cart_items": cart_items,
         "total": total,
-        "product_count": product_count,
+        "animal_count": animal_count,
         "grand_total": grand_total,
     }
 
