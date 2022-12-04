@@ -81,7 +81,7 @@ def edit_animal(request, animal_id):
         form = AnimalForm(request.POST, request.FILES, instance=animal)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated animal!')
+            messages.success(request, 'Successfully updated an Animal!')
             return redirect(reverse('animal_detail', args=[animal.id]))
         else:
             messages.error(request, 'Failed to update animal. Please ensure the form is valid.')
@@ -96,3 +96,11 @@ def edit_animal(request, animal_id):
     }
 
     return render(request, template, context)
+
+
+def delete_animal(request, animal_id):
+    """ Delete a animal from the store """
+    animal = get_object_or_404(Animal, pk=animal_id)
+    animal.delete()
+    messages.success(request, 'Animal deleted!')
+    return redirect(reverse('animals'))

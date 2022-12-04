@@ -6,7 +6,8 @@ class AnimalForm(forms.ModelForm):
 
     class Meta:
         model = Animal
-        fields = '__all__'
+        fields = ('category','sku', 'name','description','donation','image')
+
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
