@@ -55,7 +55,17 @@ def animal_detail(request, animal_id):
 
 def add_animal(request):
     """ Add a product to the store """
-    form = AnimalForm()
+    if request.method == 'POST':
+        form = AnimalForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added an Animal!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add an animal. Please ensure the form is valid.')
+    else:
+        form = AnimalForm()
+    
     template = 'animals/add_animal.html'
     context = {
         'form': form,
