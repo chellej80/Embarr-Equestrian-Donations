@@ -44,9 +44,18 @@
       <p class="my-0">My Account</p>
     </div>
   </a>
-  <div class="dropdown-menu border-0" aria-labelledby="user-options"> {% if request.user.is_authenticated %} {% if request.user.is_superuser %} <a href="{% url 'account_logout' %}" class="dropdown-item">My Donations</a> {% endif %} <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a> {% else %} <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a> {% endif %}
-  </div>
+  <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    {% if request.user.is_authenticated %}
+        {% if request.user.is_superuser %}
+            <a href="{% url 'add_animal' %}" class="dropdown-item">Animal Management</a>
+        {% endif %}
+        <a href="" class="dropdown-item">My Profile</a>
+        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+    {% else %}
+        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+    {% endif %}
+</div>
 </li>
 <li class="list-inline-item">
   <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
