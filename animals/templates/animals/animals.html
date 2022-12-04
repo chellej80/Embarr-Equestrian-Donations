@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="product-container col-10 offset-1">
+      <div class="animal-container col-10 offset-1">
         <div class="row mt-1 mb-2"></div>
         <div class="row"> {% for animal in animals %} <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div class="card h-100 border-0"> {% if animal.image %} <a href="{% url 'animal_detail' animal.id %}">
@@ -25,6 +25,20 @@
                 <div class="row">
                   <div class="col">
                     <p class="lead mb-0 text-left font-weight-bold">${{ animal.donation }}</p>
+                    {% if animal.category %}
+                                            <p class="small mt-1 mb-0">
+                                                <a class="text-muted" href="{% url 'animals' %}?category={{ animal.category.name }}">
+                                                    <i class="fas fa-tag mr-1"></i>{{ animal.category.friendly_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
+                            
+                                            {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'edit_animal' animal.id %}">Edit</a> | 
+                                                    <a class="text-danger" href="{% url 'delete_animal' animal.id %}">Delete</a>
+                                                </small>
+                                            {% endif %}
                   </div>
                 </div>
               </div>
