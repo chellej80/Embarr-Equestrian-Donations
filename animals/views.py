@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Animal, Category
+from .forms import AnimalForm
+
 
 
 # Create your views here.
@@ -49,3 +51,14 @@ def animal_detail(request, animal_id):
     }
 
     return render(request, "animals/animal_detail.html", context)
+
+
+def add_animal(request):
+    """ Add a product to the store """
+    form = AnimalForm()
+    template = 'animals/add_animal.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
