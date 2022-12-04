@@ -42,7 +42,7 @@ def all_animals(request):
 
 
 def animal_detail(request, animal_id):
-    """A view to show individual product details"""
+    """A view to show individual animal details"""
 
     animal = get_object_or_404(Animal, pk=animal_id)
 
@@ -54,13 +54,13 @@ def animal_detail(request, animal_id):
 
 
 def add_animal(request):
-    """ Add a product to the store """
+    """ Add a animal to the store """
     if request.method == 'POST':
         form = AnimalForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added an Animal!')
-            return redirect(reverse('add_product'))
+            return redirect(reverse('add_animal'))
         else:
             messages.error(request, 'Failed to add an animal. Please ensure the form is valid.')
     else:
