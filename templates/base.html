@@ -53,12 +53,20 @@
                       <p class="my-0">My Account</p>
                    </div>
                 </a>
-                <div class="dropdown-menu border-0">
-                   
-                   <a href="/accounts/signup/" aria-label="Go to the signuppage" class="dropdown-item">Register</a>
-                   <a href="/accounts/login/" aria-label="Go to the login page" class="dropdown-item">Login</a>
-                   
+                
+                  <div class="dropdown-menu border-0">
+                    {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                            <a href="{% url 'add_animal' %}" class="dropdown-item">Animal Management</a>
+                        {% endif %}
+                        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% else %}
+                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% endif %}
                 </div>
+                
              </li>
              <li class="list-inline-item">
               <a  href="{% url 'view_cart' %}" aria-label="Go to the view cart page" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
