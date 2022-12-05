@@ -1,14 +1,12 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-
   <head> {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="description" content="Embarr Equestrian Charity for Horses - Donations Accepted">
     <meta name="keywords" content="Horses, Ponies, Mares, Geldings, Retired, Charity, Donations, Equestrian, Rescue, Animals">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> {% endblock %} {% block extra_meta %} {% endblock %} {% block corecss %}
-    <title>Embarr Equestrian {% block extra_title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> {% endblock %} {% block extra_meta %} {% endblock %} {% block corecss %} <title>Embarr Equestrian {% block extra_title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}"> {% endblock %} {% block extra_css %} {% endblock %} {% block corejs %} <script src="https://kit.fontawesome.com/61ef3107ac.js" crossorigin="anonymous"></script>
@@ -18,14 +16,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <!-- Stripe -->
-    <script src="https://js.stripe.com/v3/"></script> {% endblock %} {% block extra_js %} {% endblock %} 
+    <script src="https://js.stripe.com/v3/"></script> {% endblock %} {% block extra_js %} {% endblock %}
   </head><body>
     <header class="container-fluid fixed-top">
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
             <h2 class="logo-font text-black my-0">
-              <i class="fas fa-horse-head"></i> | <strong>Embarr</strong> Equestrian 
+              <i class="fas fa-horse-head"></i> | <strong>Embarr</strong> Equestrian
             </h2>
           </a>
         </div>
@@ -45,47 +43,33 @@
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-             <li class="list-inline-item dropdown">
-                <a class="text-black nav-link" href="#" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                   <div class="text-center">
-                      <div><i class="fas fa-user fa-lg interactive-color"></i></div>
-                      <p class="my-0">My Account</p>
-                   </div>
-                </a>
-                
-                  <div class="dropdown-menu border-0">
-                    {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
-                            <a href="{% url 'add_animal' %}" class="dropdown-item">Animal Management</a>
-                        {% endif %}
-                        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                    {% else %}
-                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                    {% endif %}
+            <li class="list-inline-item dropdown">
+              <a class="text-black nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                  <div>
+                    <i class="fas fa-user fa-lg interactive-color"></i>
+                  </div>
+                  <p class="my-0">My Account</p>
                 </div>
-                
-             </li>
-             <li class="list-inline-item">
-              <a  href="{% url 'view_cart' %}" aria-label="Go to the view cart page" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
-                 <div class="text-center">
-                    <div><i class="fas fa-shopping-bag fa-lg interactive-color"></i></div>
-                    <p class="my-0">
-                       {% if grand_total %}
-                       €{{ grand_total|floatformat:2 }}
-                       {% else %}
-                       €0.00
-                       {% endif %}
-                    </p>
-                 </div>
               </a>
-           </li>
+              <div class="dropdown-menu border-0"> {% if request.user.is_authenticated %} {% if request.user.is_superuser %} <a href="{% url 'add_animal' %}" class="dropdown-item">Animal Management</a> {% endif %} <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a> {% else %} <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a> {% endif %}
+              </div>
+            </li>
+            <li class="list-inline-item">
+              <a href="{% url 'view_cart' %}" aria-label="Go to the view cart page" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
+                <div class="text-center">
+                  <div>
+                    <i class="fas fa-shopping-bag fa-lg interactive-color"></i>
+                  </div>
+                  <p class="my-0"> {% if grand_total %} €{{ grand_total|floatformat:2 }} {% else %} €0.00 {% endif %} </p>
+                </div>
+              </a>
+            </li>
           </ul>
-       </div>
-    </div>
-
+        </div>
+      </div>
       <div class="row bg-white">
         <nav class="navbar navbar-expand-lg navbar-light w-100">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">

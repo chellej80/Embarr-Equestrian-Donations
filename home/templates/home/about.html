@@ -1,91 +1,105 @@
 {% extends "base.html" %} {% load static %} {% block page_header %} <div class="container header-container">
-   <div class="row">
-     <div class="col"></div>
-   </div>
- </div> {% endblock %} {% block content %} <div class="overlay"></div>
- <div class="container h-100">
-   <h3 class="display-6 logo-font text-black"> Embarr's Mission Statement </h3>
-   <p>
-     <strong>“To build a community where people value animals and treat them with respect and kindness”</strong>
-   </p>
-   <hr>
-   <h5>We are a family run retirement home for rescued aged or abused horses that can no longer be ridden. We offer a safe haven for these sentient creatures. We are a registered charity and we need your donations and support. We do not rehome our horses, they are with us until the end. If you want to volunteer to help out please give us a call or email. If you have a welfare concern for horses in your area, you can submit an annonymous report - see link at the base of the page.
-   </h5>
-   <hr>
-   <footer id="footer" class="mt-5">
-     <div class="row row-reverse">
-       <div class="col-md-4">
-         <h3 class="sub-title">Report a Welfare Concern</h3>
-         <h6>If you have any concerns about the welfare of a horse or any other creature, please feel comfortable submitting you concerns anonymously in the form below and we will take discreet measures to investigate and take action if appropriate. <br>
-           <br>
-         </h6>
-         <form class="mt-3" method="POST" action="{% url 'contact' %}" id="profile-update-form"> {% csrf_token %} <button class="btn btn-black rounded-0 text-uppercase float-left"> Submit Details </button>
-         </form>
-       </div>
-       <div class="col-md-4">
-         <h3 class="sub-title">Our Newsletter</h3>
-         <p>Keep up with all Our News - Sign up for Our Monthly Newsletter</p>
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div> {% endblock %} {% block content %} <div class="overlay"></div>
+<div class="container h-100">
+  <h3 class="display-6 logo-font text-black"> Embarr's Mission Statement </h3>
+  <p>
+    <strong>“To build a community where people value animals and treat them with respect and kindness”</strong>
+  </p>
+  <hr>
+  <h5>We are a family run retirement home for rescued aged or abused horses that can no longer be ridden. We offer a safe haven for these sentient creatures. We are a registered charity and we need your donations and support. We do not rehome our horses, they are with us until the end. If you want to volunteer to help out please give us a call or email. If you have a welfare concern for horses in your area, you can submit an annonymous report - see link at the base of the page. </h5>
+  <hr>
+  <footer id="footer" class="mt-5">
+    <div class="row row-reverse">
+      <div class="col-md-4">
+        <h3 class="sub-title">Report a Welfare Concern</h3>
+        <h6>If you have any concerns about the welfare of a horse or any other creature, please feel comfortable submitting you concerns anonymously in the form below and we will take discreet measures to investigate and take action if appropriate. <br>
+          <br>
+        </h6>
+        <form class="mt-3" method="POST" action="{% url 'contact' %}" id="profile-update-form"> {% csrf_token %} <button class="btn btn-black rounded-0 text-uppercase float-left"> Submit Details </button>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <h3 class="sub-title">Our Newsletter</h3>
+        <p>Keep up with all Our News - Sign up for Our Monthly Newsletter</p>
         <div>
-          
-<div id="mc_embed_signup">
-    <form action="https://herokuapp.us21.list-manage.com/subscribe/post?u=a5971436fc932a3ec8f2fdb8d&amp;id=73ea16c256&amp;f_id=0054c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-        <h2>Subscribe</h2>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-  </label>
-  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-</div>
-<div id="mce-responses" class="clear foot">
-  <div class="response" id="mce-error-response" style="display:none"></div>
-  <div class="response" id="mce-success-response" style="display:none"></div>
-</div>
-  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a5971436fc932a3ec8f2fdb8d_73ea16c256" tabindex="-1" value=""></div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-black rounded-0 text-uppercase float-left">
-                
-            </div>
+          <div id="mc_embed_signup">
+            <form action="https://herokuapp.us21.list-manage.com/subscribe/post?u=a5971436fc932a3ec8f2fdb8d&amp;id=73ea16c256&amp;f_id=0054c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <h2>Subscribe</h2>
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+                  </label>
+                  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                </div>
+                <div id="mce-responses" class="clear foot">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_a5971436fc932a3ec8f2fdb8d_73ea16c256" tabindex="-1" value="">
+                </div>
+                <div class="optionalParent">
+                  <div class="clear foot">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-black rounded-0 text-uppercase float-left">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+          <script type='text/javascript'>
+            (function($) {
+              window.fnames = new Array();
+              window.ftypes = new Array();
+              fnames[0] = 'EMAIL';
+              ftypes[0] = 'email';
+              fnames[1] = 'FNAME';
+              ftypes[1] = 'text';
+              fnames[2] = 'LNAME';
+              ftypes[2] = 'text';
+              fnames[3] = 'ADDRESS';
+              ftypes[3] = 'address';
+              fnames[4] = 'PHONE';
+              ftypes[4] = 'phone';
+              fnames[5] = 'BIRTHDAY';
+              ftypes[5] = 'birthday';
+            }(jQuery));
+            var $mcj = jQuery.noConflict(true);
+          </script>
+          <!--End mc_embed_signup-->
         </div>
+      </div>
+      <div class="col-md-4">
+        <h3 class="sub-title">Follow Us</h3>
+        <ul>
+          <li>
+            <a href=https://www.facebook.com/EmbarrEquineTherapy rel="noopener" target="_blank" aria-label="Go to the facebook company page">
+              <i class="fab fa-facebook-f interactive-color"></i> Facebook </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" rel="noopener" target="_blank" aria-label="Go to the Instagram company page">
+              <i class="fab fa-instagram interactive-color"></i> Instagram </a>
+          </li>
+        </ul>
+        <hr>
+        <h3 class="sub-title">Contact Us</h3>
+        <ul>
+          <li>
+            <i class="fas fa-phone interactive-color"></i> 0353 282828282
+          </li>
+          <li>
+            <i class="far fa-envelope interactive-color"></i> embarrdonations@gmail.com
+          </li>
+          <li>
+            <i class="fas fa-home interactive-color"></i> Kilcloon, Co.Meath
+          </li>
+        </ul>
+      </div>
     </div>
-</form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
-         </div>
-       </div>
-       <div class="col-md-4">
-         <h3 class="sub-title">Follow Us</h3>
-         <ul>
-           <li>
-             <a href=https://www.facebook.com/EmbarrEquineTherapy rel="noopener" target="_blank" aria-label="Go to the facebook company page">
-               <i class="fab fa-facebook-f interactive-color"></i> Facebook </a>
-           </li>
-           <li>
-             <a href="https://www.instagram.com/" rel="noopener" target="_blank" aria-label="Go to the Instagram company page">
-               <i class="fab fa-instagram interactive-color"></i> Instagram </a>
-           </li>
-         </ul>
-         <hr>
-         <h3 class="sub-title">Contact Us</h3>
-         <ul>
-           <li>
-             <i class="fas fa-phone interactive-color"></i> 0353 282828282
-           </li>
-           <li>
-             <i class="far fa-envelope interactive-color"></i> embarrdonations@gmail.com
-           </li>
-           <li>
-             <i class="fas fa-home interactive-color"></i> Kilcloon, Co.Meath
-           </li>
-         </ul>
-       </div>
-     </div>
-     <hr>
- <!--</div>-->
- 
- </footer>
- <!--</div>-->
- </div> {% endblock %}
- 
+    <hr>
+  </footer>
+</div> {% endblock %}

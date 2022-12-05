@@ -1,53 +1,37 @@
 <div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
-  <div class="arrow-up arrow-success"></div>
-  <div class="w-100 toast-capper bg-success"></div>
-  <div class="toast-header bg-white text-dark">
+    <div class="arrow-up arrow-success"></div>
+    <div class="w-100 toast-capper bg-success"></div>
+    <div class="toast-header bg-white text-dark">
       <strong class="mr-auto">Success!</strong>
       <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <span aria-hidden="true">&times;</span>
       </button>
-  </div>
-  <div class="toast-body bg-white">
+    </div>
+    <div class="toast-body bg-white">
       <div class="row">
-          <div class="col">
-              {{ message }}
-              <hr class="mt-1 mb-3">
+        <div class="col">
+          {{ message }}
+          <hr class="mt-1 mb-3">
+        </div>
+      </div> {% if grand_total and not on_profile_page %} <p class="logo-font bg-white text-black py-1">Your cart ({{ animal_count }})</p>
+      <div class="cart-notification-wrapper"> {% for item in cart_items %} <div class="row">
+          <div class="col-3 my-1"> {% if item.animal.image %} <img class="w-100" src="{{ item.animal.image.url }}" alt="{{ item.animal.name }}"> {% else %} <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.animal.name }}"> {% endif %} </div>
+          <div class="col-9">
+            <p class="my-0">
+              <strong>{{ item.animal.name }}</strong>
+            </p>
+            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
           </div>
-      </div>
-      {% if grand_total and not on_profile_page %}
-          <p class="logo-font bg-white text-black py-1">Your cart ({{ animal_count }})</p>
-          <div class="cart-notification-wrapper">
-              {% for item in cart_items %}
-                  <div class="row">
-                      <div class="col-3 my-1">
-                          {% if item.animal.image %}
-                          <img class="w-100" src="{{ item.animal.image.url }}" alt="{{ item.animal.name }}">
-                          {% else %}
-                          <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.animal.name }}">
-                          {% endif %}
-                      </div>
-                      <div class="col-9">
-                          <p class="my-0"><strong>{{ item.animal.name }}</strong></p>
-                          <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                      </div>
-                  </div>
-              {% endfor %}
-          </div>
-          <div class="row">
-              <div class="col">
-                  <!--<strong><p class="mt-3 mb-1 text-black">
-                      
-                      <span class="float-right">${{ total|floatformat:2 }}</span>
-                  </p></strong>-->
-                  
-                  <a href="{% url 'view_cart' %}" class="btn btn-black btn-block rounded-0">
-                      <span class="text-uppercase">Go To Secure Checkout</span>
-                      <span class="icon">
-                          <i class="fas fa-lock"></i>
-                      </span>
-                  </a>
-              </div>
-          </div>
-      {% endif %}
+        </div> {% endfor %} </div>
+      <div class="row">
+        <div class="col">
+          <a href="{% url 'view_cart' %}" class="btn btn-black btn-block rounded-0">
+            <span class="text-uppercase">Go To Secure Checkout</span>
+            <span class="icon">
+              <i class="fas fa-lock"></i>
+            </span>
+          </a>
+        </div>
+      </div> {% endif %}
+    </div>
   </div>
-</div>
