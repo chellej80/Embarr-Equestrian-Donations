@@ -8,8 +8,6 @@ from .models import Post, Comment
 
 
 @admin.register(Post)
-
-
 class PostAdmin(admin.ModelAdmin):
     """
     Admin Class for the management of Blog posts
@@ -18,7 +16,7 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'status', 'created_on')
     list_filter = ("status",)
     search_fields = ['title', 'content']
-    prepopulated_fields = {'slug': ('title',)}  
+    prepopulated_fields = {'slug': ('title',)} 
 
 
 @admin.register(Comment)

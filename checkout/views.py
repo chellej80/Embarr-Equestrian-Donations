@@ -72,14 +72,6 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_line_item.save()
-                    else:
-                        for size, quantity in item_data["items_by_size"].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                animal=animal,
-                                quantity=quantity,
-                            )
-                            order_line_item.save()
                 except Animal.DoesNotExist:
                     messages.error(
                         request,

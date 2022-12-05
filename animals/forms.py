@@ -6,8 +6,8 @@ class AnimalForm(forms.ModelForm):
 
     class Meta:
         model = Animal
-        fields = ('category','sku', 'name','description','donation','image')
-
+        fields = ('category', 'sku', 'name', 'description',
+                  'donation', 'image')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

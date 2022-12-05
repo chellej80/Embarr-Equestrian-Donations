@@ -5,8 +5,6 @@ from django.db.models import Q
 from .models import Animal, Category
 from .forms import AnimalForm
 
-
-
 # Create your views here.
 
 
@@ -16,7 +14,6 @@ def all_animals(request):
     animals = Animal.objects.all()
     query = None
     categories = None
-    
 
     if request.GET:
         if "category" in request.GET:
@@ -54,27 +51,29 @@ def animal_detail(request, animal_id):
     return render(request, "animals/animal_detail.html", context)
 
 
-@login_required 
+@login_required
 def add_animal(request):
-    """ Add a animal to the store """
+    """Add a animal to the store"""
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
-        
-    if request.method == 'POST':
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse("home"))
+
+    if request.method == "POST":
         form = AnimalForm(request.POST, request.FILES)
         if form.is_valid():
             animal = form.save()
-            messages.success(request, 'Successfully added an Animal!')
-            return redirect(reverse('animal_detail', args=[animal.id]))
+            messages.success(request, "Successfully added an Animal!")
+            return redirect(reverse("animal_detail", args=[animal.id]))
         else:
-            messages.error(request, 'Failed to add an animal. Please ensure the form is valid.')
+            messages.error(
+                request, "Failed to add an animal. Please ensure the form is valid."
+            )
     else:
         form = AnimalForm()
-    
-    template = 'animals/add_animal.html'
+
+    template = "animals/add_animal.html"
     context = {
-        'form': form,
+        "form": form,
     }
 
     return render(request, template, context)
@@ -82,28 +81,30 @@ def add_animal(request):
 
 @login_required
 def edit_animal(request, animal_id):
-    """ Edit a animal in the store """
+    """Edit a animal in the store"""
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse("home"))
 
     animal = get_object_or_404(Animal, pk=animal_id)
-    if request.method == 'POST':
+    if request.method == "POST":
         form = AnimalForm(request.POST, request.FILES, instance=animal)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated an Animal!')
-            return redirect(reverse('animal_detail', args=[animal.id]))
+            messages.success(request, "Successfully updated an Animal!")
+            return redirect(reverse("animal_detail", args=[animal.id]))
         else:
-            messages.error(request, 'Failed to update animal. Please ensure the form is valid.')
+            messages.error(
+                request, "Failed to update animal. Please ensure the form is valid."
+            )
     else:
         form = AnimalForm(instance=animal)
-        messages.info(request, f'You are editing {animal.name}')
+        messages.info(request, f"You are editing {animal.name}")
 
-    template = 'animals/edit_animal.html'
+    template = "animals/edit_animal.html"
     context = {
-        'form': form,
-        'animal': animal,
+        "form": form,
+        "animal": animal,
     }
 
     return render(request, template, context)
@@ -111,12 +112,12 @@ def edit_animal(request, animal_id):
 
 @login_required
 def delete_animal(request, animal_id):
-    """ Delete a animal from the store """
+    """Delete a animal from the store"""
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse("home"))
 
     animal = get_object_or_404(Animal, pk=animal_id)
     animal.delete()
-    messages.success(request, 'Animal deleted!')
-    return redirect(reverse('animals'))
+    messages.success(request, "Animal deleted!")
+    return redirect(reverse("animals"))

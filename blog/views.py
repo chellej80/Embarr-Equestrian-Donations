@@ -48,7 +48,6 @@ class PostDetail(View):
             },
         )
 
-
     def post(self, request, slug):
         """
         This Function is used for the comments of posts
