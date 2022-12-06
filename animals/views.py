@@ -56,7 +56,7 @@ def add_animal(request):
     """Add a animal to the store"""
     if not request.user.is_superuser:
         messages.error(request, "Sorry, only store owners can do that.")
-        return redirect(reverse("home"))
+        return redirect(reverse("index"))
 
     if request.method == "POST":
         form = AnimalForm(request.POST, request.FILES)
@@ -84,7 +84,7 @@ def edit_animal(request, animal_id):
     """Edit a animal in the store"""
     if not request.user.is_superuser:
         messages.error(request, "Sorry, only store owners can do that.")
-        return redirect(reverse("home"))
+        return redirect(reverse("index"))
 
     animal = get_object_or_404(Animal, pk=animal_id)
     if request.method == "POST":
@@ -115,7 +115,7 @@ def delete_animal(request, animal_id):
     """Delete a animal from the store"""
     if not request.user.is_superuser:
         messages.error(request, "Sorry, only store owners can do that.")
-        return redirect(reverse("home"))
+        return redirect(reverse("index"))
 
     animal = get_object_or_404(Animal, pk=animal_id)
     animal.delete()
