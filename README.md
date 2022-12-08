@@ -694,7 +694,7 @@ Test 2
 
 Test Steps:
 
-Selecting secure checkout in the shopping cart, takes the user to the checkout page.
+Selecting the profile option under account a user can see their order history.
 
 Expected Results  | Pass y/n
 ------------- | ------------- 
@@ -712,6 +712,10 @@ User can navigate to the About us page and select to submit a welfare concern vi
 Expected Results  | Pass y/n
 ------------- | ------------- 
 User can navigate to the About us page and select to submit a welfare concern via a form.| Y
+Admin User can see the submissions in the django admin panel | Y
+
+<img src=media/contacts.JPG>
+
 
 ## Site Links
 
@@ -794,7 +798,6 @@ I used chrome developer tools, Techsini & ami throughout all development of the 
 I tested the site responsiveness on my iphone/ ipad and my family/ friends android mobile devices to ensure the site was rendering and functional across a range of devices.
 
 ## Admin 
-
 Expected Results  | Pass y/n
 ------------- | -------------
 Admin User can log in to django auth admin | Y
@@ -810,7 +813,12 @@ Admin User can see static files in Aws Bucket and upload | Y
 
 ## Bugs
 
-Database connection to Heroku failed - This was resolved my re-running migrations.
+- Database connection to Heroku failed - This was resolved my re-running migrations.
+- Order Grand Total was not updating - Fixed calculation issue in checkout models.
+- Ordinary users could access crud links by entering the urls, fixed by adding defensive design in the views and user authentications requirements.
+- Webhooks initially were failing and order confirmation emails were not being sent - refactored the webhooks py & updated the stripe webhook links and now working.
+- Index page redirect was not working when logging out as a user - fixed this by updaing the url redirect in settings.
+
 
 ## Content 
 

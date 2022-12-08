@@ -53,9 +53,8 @@ class Order(models.Model):
             self.lineitems.aggregate(
                 Sum("lineitem_total"))["lineitem_total__sum"] or 0
         )
-    
-        self.delivery_cost = 0
-        self.grand_total = self.order_total + self.delivery_cost
+        #self.delivery_cost = 0
+        self.grand_total = self.order_total
         self.save()
 
     def save(self, *args, **kwargs):
@@ -79,14 +78,9 @@ class OrderLineItem(models.Model):
         on_delete=models.CASCADE,
         related_name="lineitems",
     )
-    animal = models.ForeignKey(
-        Animal, null=False, blank=False, on_delete=models.CASCADE
-    )
-
+    animal = models.ForeignKey(Animal, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(
-        max_digits=6, decimal_places=2, null=False, blank=False, editable=False
-    )
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
         """
