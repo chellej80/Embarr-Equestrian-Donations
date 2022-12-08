@@ -21,7 +21,7 @@ from .views import handler404
 from . import views
 
 urlpatterns = [
-    path("", include("home.urls"), name="home.urls"),
+    path("", include("home.urls")),
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls"), name="accounts.urls"),
     path("animals/", include("animals.urls")),

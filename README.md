@@ -202,7 +202,7 @@ __Update/ Delete Comment__
 
 __About Us Page__
 
-This page displays Embarr Donations Mission statement. It also provides an annonymous welfare concern form for a site user to report animal welfare cases with revealing their identity. On the page in the footer the site user can also sign up for the monthly newsletter and see contact details and links to the facebook page and instagram.
+This page displays Embarr Donations Mission statement. It also provides an annonymous welfare concern form for a site user to report animal welfare cases with revealing their identity. On the page in the footer the site user can also sign up for the monthly newsletter that is handled by mailchimp and see contact details and links to the facebook page and instagram.
 
 <img src=media/Readme/about.jpg>
 
@@ -221,6 +221,15 @@ __Create, Update/ Delete Animal__
 
 As a logged in superuser crud functionality is available via the account option by navigating to Animal Management, here the superuser can add/ update an animal in the catalog. The options to edit/ delete an animal in the catalog are also available to the superuser.
 
+<img src=media/Animal_mgt.JPG>
+
+<img src=media/Animal_mgt_add.JPG>
+
+<img src=media/Animal_mgt_delete.JPG>
+
+<img src=media/Animal_mgt_edit.JPG>
+
+
 __Shopping Cart__
 
 Once a site user selects a horse in the catalog they are brought to the shopping cart page where they add their donation to the cart. They also have the option here can to increase their donation amount by quantities/ remove/update the cart.
@@ -229,7 +238,7 @@ Once a site user selects a horse in the catalog they are brought to the shopping
 
 __Checkout__
 
-After adding donations to the cart, the user can select 'secure checkout' and they are brought to the checkout page. Here they fill in all their billing details before adding their card details and clicking on complete payment. Payments are handled by 'Stripe'. Users can checkout annonymously and/ or if registered, their orders will be recorded and available as a list under their profile.
+After adding donations to the cart, the user can select 'secure checkout' and they are brought to the checkout page. Here they fill in all their billing details before adding their card details and clicking on complete payment. Payments are handled by 'Stripe'. Users can checkout annonymously and/ or if registered, their orders will be recorded and available as an Order list under their profile.
 
 <img src=media/Readme/checkout.jpg>
 
@@ -237,9 +246,11 @@ After adding donations to the cart, the user can select 'secure checkout' and th
 
 __Checkout Success__
 
-Once payment is successful the site user is brought to the success page.
+Once payment is successful the site user is brought to the success page and an order confirmation is sent via email. This email confirmation is actioned by a scucessful payment intent webhook from stripe.
 
 <img src=media/Readme/pay_confirm.jpg>
+
+<img src=media/Readme/email_Order_confirm.JPG>
 
 __User Profile__
 
@@ -254,14 +265,13 @@ __404 Page__
 ### Features Left to Implement and items for further development
 
 - Approval authentication of updated comments (This was out of scope)
+- Update Animal Catalog with Donation Target Details and Amount raised to date detail.
 - Bespoke forms for the out of the box Django Auth pages - Login/ Logout/ Register and comment forms.
 - Improved search functionality
 - Add bio/ profile picture to profile
 - Improvements of the toasts messaging.
-- Further development of the newsletter sign up functionality - for e.g link to mailchimp.
 - Improve the CSS/ Images, overall frontend design.
 - Add cookie consent and privacy statement.
-- Add front end catalog management.
 - Further SEO improvements e.g sitemap google registration.
 - Wishlist/ favourites.
 - 500 page etc..
@@ -282,7 +292,6 @@ Python Packages:
 - Allauth - For authentication, registration, account management
 - Crispy Forms -To style the forms
 - django coniutries
-- Stripe for processing all online and credit card purchases on the website
 - Pillow to process and save all the images downloaded through the database
 
 ### Frameworks, Libraries and technologies used
@@ -299,6 +308,7 @@ Python Packages:
 - [Fontawesome](https://fontawesome.com/) - To add icons to the website
 - [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - To check App responsiveness and debugging
 - [aws](https://aws.amazon.com/) - was used to host the static files and media
+- [Stripe](https://stripe.com/ie) for processing all online and credit card purchases on the website & for handling the webhooks.
 
 
 # Testing Conducted 
@@ -315,6 +325,8 @@ All Navigation bar links are clickable and return the expected pages.
 Test Steps:
 
 Click on each nav link in the nav bar, and navigate between all pages using the nav links. Checking that each link brings the user to the correct page.
+
+
 
 Test 2
 
@@ -353,7 +365,9 @@ Username links to User Profile Page | Y
 Login link reappears when logged out | Y
 Messages appear as expected when successful login/ logout | Y
 
+<img src=media/Nav_response.JPG>
 
+<img src=media/Nav_response2.JPG>
 
 ### Page Navigation
 
@@ -397,6 +411,7 @@ Search returns a negative result - page displays as expected | Y
 Hitting return after entering text returns the result page | Y
 Clicking the search magnifier returns the result page | Y
 
+<img src=media/search.JPG>
 
 ## User Registration
 
@@ -414,11 +429,19 @@ On registering the user is asked to verify their email before they can sign in.
 
 Click on register, sign up page displays, populate fields and submit
 
+<img src=media/Register.JPG>
+
+<img src=media/Readme/Confirm_email2.JPG>
+
+<img src=media/Readme/email_confirm.jpg>
+
 Test 3 – Login
 
 Test steps:
 
 Click on login, enter details and submit
+
+<img src=media/sign_in_tst.JPG>
 
 Test 4 - Update Profile
 
@@ -426,11 +449,19 @@ Test steps:
 
 Login, click on username, enter details and submit
 
+<img src=media/Update_profile.JPG>
+
 Test 5 - Logout
 
 Test steps:
 
 Click on logout, and verify that you are sure
+
+<img src=media/sign_out.JPG>
+
+
+<img src=media/signout_success.JPG>
+
 
 Expected Results  | Pass y/n
 ------------- | -------------
