@@ -53,10 +53,10 @@ As logged in website user, I can:
 
 As a website superuser, I can:
 
-1. Add/ delete horses to/from the catalog & update their details.
-2. Create/ update/delete blog posts
+1. Add/ delete horses to/from the animal catalog & update their details via the backend admin & frontend site.
+2. Create/ update/delete blog posts via backend & frontend site.
 2. Create draft blog posts that can be reviewed and published at a later date.
-3. Create a new user.
+3. Create new users.
 4. Delete user and comment.
 5. Approve user's comments.
 
@@ -174,7 +174,7 @@ Home page has the hero image and the Donate option prominently displayed. The na
 
 - __Blog__
 
-  On the bolg page the site user can click on a blog post to to see more detail, or click though the page navigation (pagination is actioned once 8 posts are displayed. to see further blog posts.
+  On the blog page the site user can click on a blog post to to see more detail, or click though the page navigation (pagination is actioned once 8 posts are displayed. to see further blog posts.
 
 <img src=media/Readme/blog_view.jpg>
    
@@ -261,6 +261,8 @@ If a user has registered and logged into the site. They can navigate to their ac
 __404 Page__
 
 <img src=media/404.jpg>
+
+
 
 ### Features Left to Implement and items for further development
 
@@ -506,6 +508,8 @@ Expected Results  | Pass y/n
 User can view all blog posts on homepage | Y
 User can click on link on a blog post to navigate to the blog post detail page | Y
 
+<img src=media/Readme/blog_view.jpg>
+
 ## Comments
 
 Test 1 - Submit a Comment
@@ -521,6 +525,8 @@ Test Steps:
 - Confirm that the Edit/delete options are available
 - Log out and back in as a different user
 - Confirm that the Edit/delete options are not available for other users' comment posts.
+
+<img src=media/Readme/comment_logged_in.jpg>
 
 Test 2 – Edit/ Delete a Comment
 
@@ -544,6 +550,10 @@ User - logged in is brought to update comment page as expected on clicking edit 
 User - logged in receives visual message feedback that their updates have occurred | Y
 User - logged in can successfully edit a comment item | Y
 User - logged in can successfully delete a comment item | Y
+Crud links are not accessible by entering urls, defensive desighn is working | Y
+
+
+<img src=media/Readme/delete_comment.jpg>
 
 ## View Horses Catalog
 
@@ -569,6 +579,8 @@ Click on a Horses image in the catalog to view more detail and see the add to ca
 Expected Results  | Pass y/n
 ------------- | ------------- 
 Clicking on a horses image brings the user to detail page where the option to add to cart is displayed | Y
+
+<img src=media/Readme/add_to_cart_logged_in.JPG>
 
 ## Add a donation to the cart
 
@@ -720,12 +732,60 @@ All messaging e.g Toasts/ modal - were tested and working as expected
 
 ## Email Confirmation
 
-Email confirmation on registration is enabled and using gmail. Tested and working as expected.
+Test 1
+
+Register a new user, validate email address & log in
+
+Test 2
+
+Complete a full order, check webhooks in Stripe & confirm email is sent
+
+
+Expected Results | Pass Y/N
+
+Email confirmation on registration is enabled and using gmail. Tested and working as expected. | Y
+Order Email Confirmation triggered by stripe webhooks are enabled, tested and working as expected  | Y
 
 
 <img src=media/Readme/verify_email.jpg>
 
 <img src=media/Readme/email_confirm.jpg>
+
+<img src=media/webhooks.jpg>
+
+## Newsletter Subscription - Mailchimp
+
+On entering email into subscription field in the footer of the 'About' page, the subsciption is successfully sent to the relevant Mailchimp account.
+
+
+<img src=media/mailchimp.JPG>
+
+Email Validation is working on the Newsletter subscription field
+
+<img src=media/test_mail_invalid.jpg>
+
+## Catalog/ Animal Management
+
+Test 1
+
+Test Steps:
+
+Once logged in as a superuser, crud fuctionality is available via the frontend online, the super user can add, update, delete animals from the catalog. 
+
+Expected Results  | Pass y/n
+------------- | ------------- 
+Once logged the superuser has the ability to add to the animal catalog. | Y
+Once logged the superuser has the ability to update the animal catalog. | Y
+Once logged the superuser has the ability to delete from the animal catalog. | Y
+Crud functionality is not available to any other user & the links are not accessible by entering | Y
+
+<img src=media/Animal_mgt.JPG>
+
+<img src=media/Animal_mgt_add.JPG>
+
+<img src=media/Animal_mgt_edit.JPG>
+
+<img src=media/Animal_mgt_delete.JPG>
 
 ## Responsiveness 
 

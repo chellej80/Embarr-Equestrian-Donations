@@ -46,12 +46,16 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Update grand total each time a line item is added    
+        Update grand total each time a line item is added,
+        accounting for delivery costs.
         """
         self.order_total = (
-            self.lineitems.aggregate(Sum("lineitem_total"))["lineitem_total__sum"] or 0
+            self.lineitems.aggregate(
+                Sum("lineitem_total"))["lineitem_total__sum"] or 0
         )
-        self.grand_total = self.order_total
+        
+        self.delivery_cost = 0
+        self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
     def save(self, *args, **kwargs):
