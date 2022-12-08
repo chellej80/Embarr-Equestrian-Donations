@@ -216,6 +216,11 @@ The Horses link in the nav bar takes the user to the catalog of horses that are 
 
 <img src=media/Readme/catalog.jpg>
 
+
+__Create, Update/ Delete Animal__
+
+As a logged in superuser crud functionality is available via the account option by navigating to Animal Management, here the superuser can add/ update an animal in the catalog. The options to edit/ delete an animal in the catalog are also available to the superuser.
+
 __Shopping Cart__
 
 Once a site user selects a horse in the catalog they are brought to the shopping cart page where they add their donation to the cart. They also have the option here can to increase their donation amount by quantities/ remove/update the cart.
