@@ -593,6 +593,8 @@ Expected Results  | Pass y/n
 ------------- | ------------- 
 Clicking on add to cart, increments the shopping cart in the nav bar | Y
 
+<img src=media/toast_add_to_cart.JPG>
+
 ## Shopping Cart
 
 Test 1
@@ -685,6 +687,20 @@ Orders are populated in the django admin Database with correct totals | Y
 
 <img src=media/admin_orders.JPG>
 
+## Stripe Payments
+
+Test 1
+
+Go to Stripe console and confirm payments are being recorded correctly
+
+Test 2 
+
+Go to stripe webhooks anc confirm webhooks are being sucessfully created
+
+
+<img src=media/stripe_payments.JPG>
+
+<img src=media/webhooks2.jpg>
 
 ## Profile
 
