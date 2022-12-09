@@ -552,7 +552,6 @@ User - logged in can successfully edit a comment item | Y
 User - logged in can successfully delete a comment item | Y
 Crud links are not accessible by entering urls, defensive desighn is working | Y
 
-
 <img src=media/Readme/delete_comment.jpg>
 
 ## View Horses Catalog
@@ -580,7 +579,7 @@ Expected Results  | Pass y/n
 ------------- | ------------- 
 Clicking on a horses image brings the user to detail page where the option to add to cart is displayed | Y
 
-<img src=media/Readme/add_to_cart_logged_in.JPG>
+
 
 ## Add a donation to the cart
 
@@ -665,7 +664,9 @@ Test 4
 
 Test Steps:
 
-Payment sucessful - user is brought to the order confirmation page.
+Payment sucessful - user is brought to the order confirmation page & an order confirmation email is sent
+
+<img src=media/Readme/media/order_success.JPG>
 
 Test 5
 
@@ -680,6 +681,9 @@ Selecting secure checkout in the shopping cart, takes the user to the checkout p
 User can populate the billing details form and submit a payment using a stripe test card.| Y
 Payment sucessful - user is brought to the order confirmation page.| Y
 Payment un-sucessful - error message is displayed and the user can try again.| Y
+Orders are populated in the django admin Database with correct totals | Y
+
+<img src=media/admin_orders.JPG>
 
 
 ## Profile
@@ -700,6 +704,8 @@ Expected Results  | Pass y/n
 ------------- | ------------- 
 Once logged in a User has the ability to update their profile. | Y
 If a logged in user has orders these can be viewed in the Profile view| Y
+
+<img src=media/order_profile_update.JPG>
 
 ## Welfare Submission form
 
@@ -782,6 +788,7 @@ Once logged the superuser has the ability to add to the animal catalog. | Y
 Once logged the superuser has the ability to update the animal catalog. | Y
 Once logged the superuser has the ability to delete from the animal catalog. | Y
 Crud functionality is not available to any other user & the links are not accessible by entering | Y
+User can see test horse added to the catalog | Y
 
 <img src=media/Animal_mgt.JPG>
 
@@ -790,6 +797,9 @@ Crud functionality is not available to any other user & the links are not access
 <img src=media/Animal_mgt_edit.JPG>
 
 <img src=media/Animal_mgt_delete.JPG>
+
+<img src=media/Test_horse.JPG>
+
 
 ## Responsiveness 
 
