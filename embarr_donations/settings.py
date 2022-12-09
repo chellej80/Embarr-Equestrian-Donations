@@ -27,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = ["embarr-donations.herokuapp.com", "localhost"]
 
@@ -125,8 +125,8 @@ if "DATABASE_URL" in os.environ:
 else:
     DATABASES = {
         "default": {
-           "ENGINE": "django.db.backends.sqlite3",
-           "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
         }
     }
 
